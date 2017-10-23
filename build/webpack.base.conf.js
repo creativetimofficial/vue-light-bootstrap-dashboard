@@ -21,22 +21,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      'vue$': 'vue/dist/vue.common.js',
       '@': resolve('src'),
-      'src': resolve('src')
     }
   },
   module: {
     rules: [
-      {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -74,3 +64,11 @@ module.exports = {
     ]
   }
 }
+
+/**
+ * Vue Paper Dashboard PRO Custom configuration. Do not delete this once upgrading to a newer vue-cli version
+ */
+
+const merge = require('webpack-merge')
+const customWebpackConfig = require('./webpack.custom')
+module.exports = merge(customWebpackConfig, module.exports)

@@ -1,9 +1,9 @@
 <template>
-  <div class="l-checkbox checkbox" :class="checkboxType">
-    <input :id="cbId" type="checkbox"
-           :checked="model===true"
+  <div class="checkbox" :class="inlineClass">
+    <input :id="cbId"
+           type="checkbox"
            :disabled="disabled"
-           v-model="model">
+           v-model="model" />
     <label :for="cbId">
       <slot></slot>
     </label>
@@ -11,18 +11,14 @@
 </template>
 <script>
   export default{
-    name: 'l-checkbox',
+    name: 'p-checkbox',
     model: {
-      prop: 'checked',
-      event: 'change'
+      prop: 'checked'
     },
     props: {
       checked: [Array, Boolean],
       disabled: [Boolean, String],
-      type: {
-        type: String,
-        default: 'neutral'
-      }
+      inline: Boolean
     },
     data () {
       return {
@@ -35,12 +31,12 @@
           return this.checked
         },
         set (check) {
-          this.$emit('change', check)
+          this.$emit('input', check)
         }
       },
-      checkboxType () {
-        if (this.type) {
-          return `checkbox-${this.type}`
+      inlineClass () {
+        if (this.inline) {
+          return `checkbox-inline`
         }
       }
     },
@@ -49,5 +45,3 @@
     }
   }
 </script>
-<style>
-</style>

@@ -1,8 +1,8 @@
 <template>
   <Card>
-    <template slot="header">
+    <div class="card-header" v-if="$slots.header">
       <slot name="header"></slot>
-    </template>
+    </div>
     <div :id="chartId" class="ct-chart"></div>
     <slot name="footer">
     </slot>
@@ -14,6 +14,7 @@
     components: {
       Card
     },
+
     name: 'chart-card',
     props: {
       footerText: {
@@ -34,12 +35,6 @@
           return {}
         }
       },
-      chartResponsiveOptions: {
-        type: Array,
-        default: () => {
-          return []
-        }
-      },
       chartData: {
         type: Object,
         default: () => {
@@ -52,7 +47,8 @@
     },
     data () {
       return {
-        chartId: 'no-id'
+        chartId: 'no-id',
+        $Chartist: null
       }
     },
     methods: {
@@ -61,7 +57,7 @@
        */
       initChart () {
         var chartIdQuery = `#${this.chartId}`
-        this.$Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions, this.chartResponsiveOptions)
+        this.$Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions)
       },
       /***
        * Assigns a random id to the chart
@@ -75,12 +71,13 @@
         return Math.floor(Math.random() * (max - min + 1)) + min
       }
     },
-    mounted () {
+    async mounted () {
       this.updateChartId()
-      this.$nextTick(this.initChart)
+      const Chartist = await import('chartist')
+      this.$Chartist = Chartist
+      this.initChart()
     }
   }
-
 </script>
 <style>
 

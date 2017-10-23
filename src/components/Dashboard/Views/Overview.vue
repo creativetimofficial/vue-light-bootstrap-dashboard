@@ -137,7 +137,7 @@
                      :columns="tableData.columns">
               <template slot="columns"></template>
 
-              <template scope="props">
+              <template slot-scope="props">
                 <td>
                   <Checkbox v-model="props.item.checked"></Checkbox>
                 </td>

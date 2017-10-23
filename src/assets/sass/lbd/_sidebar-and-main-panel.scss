@@ -1,5 +1,5 @@
 .sidebar{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -13,11 +13,11 @@
 
     .sidebar-wrapper{
         position: relative;
-        max-height: none;
-        min-height: 100%;
-        overflow: hidden;
+        height: calc(100vh - 75px);
+        overflow: auto;
         width: 260px;
         z-index: 4;
+        padding-bottom: 30px;
     }
 
     .sidebar-background{
@@ -33,8 +33,10 @@
     }
 
     .logo{
-        padding: $navbar-padding-a;
+        padding: 10px 30px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        z-index: 4;
 
         p{
             float: left;
@@ -45,24 +47,33 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
-        .simple-text{
-            text-transform: uppercase;
-            padding: $padding-small-vertical $padding-zero;
-            display: block;
-            font-size: $font-size-large;
-            color: $white-color;
+        a.logo-mini{
+            float: left;
             text-align: center;
-            font-weight: $font-weight-normal;
-            line-height: 30px;
+            width: 30px;
+            margin-right: 15px;
+
+            img{
+                width: 40px;
+                margin-left: -3px;
+                display: block;
+                margin-top: 2px;
+            }
         }
+
+        a.logo-normal{
+            display: block;
+        }
+
         .logo-img{
-          width: 34px;
-          display: inline-block;
-          height: 34px;
-          margin-left: -2px;
-          margin-top: -2px;
-          margin-right: 10px;
-          text-align: center;
+            width: 34px;
+            display: inline-block;
+            height: 34px;
+            margin-left: -2px;
+            margin-top: -2px;
+            margin-right: 10px;
+            border-radius: 30px;
+            text-align: center;
         }
     }
 
@@ -92,7 +103,10 @@
                 border-radius: 4px;
             }
 
-            &:hover > a{
+            &:hover > a,
+            &.open > a,
+            &.open > a:focus,
+            &.open > a:hover{
                 background: rgba(255,255,255,0.13);
                 opacity: 1;
             }
@@ -113,6 +127,12 @@
             text-transform: uppercase;
         }
 
+        .caret{
+            top: 24px;
+            position: absolute;
+            right: 15px;
+        }
+
         i{
             font-size: 28px;
             float: left;
@@ -128,7 +148,7 @@
 .sidebar,
 body > .navbar-collapse{
     .logo{
-        padding: $navbar-padding-a;
+        padding: 10px 30px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
         p{
@@ -146,7 +166,6 @@ body > .navbar-collapse{
             display: block;
             font-size: $font-size-large;
             color: $white-color;
-            text-align: center;
             font-weight: $font-weight-normal;
             line-height: 30px;
         }
@@ -218,11 +237,10 @@ body > .navbar-collapse{
 
 .main-panel{
     background: rgba(203,203,210,.15);
+    height: calc(100% - 62px);
     position: relative;
-    z-index: 2;
     float: right;
     width: $sidebar-width;
-    min-height: 100%;
 
     > .content{
         padding: 30px 15px;
@@ -240,9 +258,6 @@ body > .navbar-collapse{
 
 .sidebar,
 .main-panel{
-    overflow: auto;
-    max-height: 100%;
-    height: 100%;
     -webkit-transition-property: top,bottom;
     transition-property: top,bottom;
     -webkit-transition-duration: .2s,.2s;
