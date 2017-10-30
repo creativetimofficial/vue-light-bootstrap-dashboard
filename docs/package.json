@@ -4,7 +4,8 @@
   "description": "> Vue light bootstrap dashboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "poi build && cpy dist/* ../dist/documentation/"
   },
   "author": "",
   "license": "ISC",

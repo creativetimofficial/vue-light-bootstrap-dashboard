@@ -10,7 +10,7 @@ Check the [Live Demo here](https://github.com/cristijora/vue-light-bootstrap-das
 ![](static/Dashboard.PNG)
 
 ## Documentation (Work in Progress)
-Link to [Documentation](https://cristijora.github.io/vue-light-bootstrap-dashboard/documentation/#/component-docs/buttons)
+Link to [Documentation](https://cristijora.github.io/vue-light-bootstrap-dashboard/documentation/#/buttons)
 
 ## Build Setup
 
