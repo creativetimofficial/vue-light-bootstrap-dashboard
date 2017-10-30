@@ -14,7 +14,6 @@
     components: {
       Card
     },
-
     name: 'chart-card',
     props: {
       footerText: {

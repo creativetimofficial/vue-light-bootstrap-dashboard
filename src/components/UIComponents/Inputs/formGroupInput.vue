@@ -12,6 +12,7 @@
 </template>
 <script>
   export default {
+    name: 'fg-input',
     inheritAttrs: false,
     props: {
       label: String,
