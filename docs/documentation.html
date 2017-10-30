@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue-light-bootstrap-dashboard - Vue light bootstrap dashboard</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Vue light bootstrap dashboard">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/docsify/lib/themes/vue.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body class="ct-documentation">
+  <div id="app"></div>
+</body>
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script>
+  var jsResources = '<scr' + 'ipt src="https://unpkg.com/vue/dist/vue.js"></scr' + 'ipt>'
+  var cssResources = '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");'
+  var bootCode = 'var globalVariable = "leon"'
+
+  window.$docsify = {
+    name: 'vue-light-bootstrap-dashboard',
+    repo: '',
+    loadSidebar: 'sidebar.md',
+    plugins: [
+      DemoBoxVue.create(jsResources, cssResources, bootCode)
+    ]
+  }
+</script>
+<script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
+</html>
