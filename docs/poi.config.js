@@ -3,9 +3,16 @@ module.exports = {
     browsers: ['> 5%']
   },
   html: {
-    template: 'documentation.html'
+    template: 'index.html'
+  },
+  staticFolder: 'component-docs',
+  devServer: {
+    contentBase: 'component-docs',
+    hot: true,
+    watchContentBase: true
   },
   webpack (config) {
+    config.output.publicPath = ''
     return config
   }
 }
