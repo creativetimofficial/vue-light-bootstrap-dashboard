@@ -1,4 +1,0 @@
-- [Home](/component-docs/buttons.md)
-- [Buttons](/component-docs/buttons.md)
-- [Checkboxes](/component-docs/checkboxes.md)
-- [Radio](/component-docs/radio.md)
