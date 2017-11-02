@@ -70,4 +70,7 @@
   }
 </script>
 <style>
+  #map {
+    height: calc(100vh - 130px);
+  }
 </style>

@@ -17,6 +17,7 @@
           <sidebar-link v-for="(link,index) in sidebarLinks"
                         :key="link.name + index"
                         :to="link.path"
+                        @click="closeNavbar"
                         :link="link">
             <i :class="link.icon"></i>
             <p>{{link.name}}</p>
@@ -28,6 +29,7 @@
 </template>
 <script>
   import SidebarLink from './SidebarLink.vue'
+
   export default {
     components: {
       SidebarLink
@@ -56,6 +58,15 @@
       sidebarLinks: {
         type: Array,
         default: () => []
+      },
+      autoClose: {
+        type: Boolean,
+        default: true
+      }
+    },
+    provide () {
+      return {
+        autoClose: this.autoClose
       }
     },
     computed: {

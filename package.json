@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "chartist": "^0.10.1",
-    "element-ui": "^2.0.0-beta.1",
+    "chartist": "^0.11.0",
+    "element-ui": "^2.0.2",
     "es6-promise": "^4.1.1",
     "google-maps": "^3.2.1",
     "v-tooltip": "^2.0.0-rc.1",

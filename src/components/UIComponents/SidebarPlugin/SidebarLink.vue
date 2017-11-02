@@ -1,7 +1,8 @@
 <template>
-  <component  :is="tag"
-              v-bind="$attrs"
-              tag="li">
+  <component :is="tag"
+             @click.native="hideSidebar()"
+             v-bind="$attrs"
+             tag="li">
     <a>
       <slot>
         <i v-if="link.icon" :class="link.icon"></i>
@@ -13,6 +14,11 @@
 <script>
   export default {
     inheritAttrs: false,
+    inject: {
+      autoClose: {
+        default: true
+      }
+    },
     props: {
       link: {
         type: [String, Object],
@@ -27,6 +33,13 @@
       tag: {
         type: String,
         default: 'router-link'
+      }
+    },
+    methods: {
+      hideSidebar () {
+        if (this.autoClose && this.$sidebar && this.$sidebar.showSidebar === true) {
+          this.$sidebar.displaySidebar(false)
+        }
       }
     }
   }
