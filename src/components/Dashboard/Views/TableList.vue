@@ -26,8 +26,8 @@
             </template>
             <div class="table-responsive table-full-width">
               <l-table class="table table-hover"
-                       :columns="table1.columns"
-                       :data="table1.data">
+                       :columns="table2.columns"
+                       :data="table2.data">
               </l-table>
             </div>
           </Card>
@@ -84,14 +84,10 @@
     data () {
       return {
         table1: {
-          title: 'Stripped Table',
-          subTitle: 'Here is a subtitle for this table',
           columns: [...tableColumns],
           data: [...tableData]
         },
         table2: {
-          title: 'Table on Plain Background',
-          subTitle: 'Here is a subtitle for this table',
           columns: [...tableColumns],
           data: [...tableData]
         }

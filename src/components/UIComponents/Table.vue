@@ -1,13 +1,13 @@
 <template>
   <table class="table">
     <thead>
-    <slot name="columns">
-      <th v-for="column in columns">{{column}}</th>
-    </slot>
+      <slot name="columns">
+        <th v-for="column in columns">{{column}}</th>
+      </slot>
     </thead>
     <tbody>
     <tr v-for="item in data">
-      <slot :item="item">
+      <slot :row="item">
         <td v-for="column in columns" v-if="hasValue(item, column)">{{itemValue(item, column)}}</td>
       </slot>
     </tr>
@@ -19,15 +19,7 @@
     name: 'l-table',
     props: {
       columns: Array,
-      data: Array,
-      title: {
-        type: String,
-        default: ''
-      },
-      subTitle: {
-        type: String,
-        default: ''
-      }
+      data: Array
     },
     methods: {
       hasValue (item, column) {
