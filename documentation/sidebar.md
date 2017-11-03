@@ -3,3 +3,5 @@
 - [Radio](/radio.md)
 - [Inputs](/inputs.md)
 - [Dropdown](/dropdown.md)
+- [Tables](/tables.md)
+- [Tooltips](/tooltips.md)
