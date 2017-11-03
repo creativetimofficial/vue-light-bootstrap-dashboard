@@ -1,7 +1,30 @@
-@import "../src/assets/sass/light-bootstrap-dashboard";
+@import "../src/assets/sass/lbd/variables";
+@import "../src/assets/sass/lbd/mixins";
+
+@import "../src/assets/sass/lbd/typography";
+
+// Core CSS
+@import "../src/assets/sass/lbd/misc";
+@import "../src/assets/sass/lbd/buttons";
+@import "../src/assets/sass/lbd/inputs";
+
+@import "../src/assets/sass/lbd/alerts";
+@import "../src/assets/sass/lbd/tables";
+
+@import "../src/assets/sass/lbd/checkbox-radio-switch";
+@import "../src/assets/sass/lbd/navbars";
+@import "../src/assets/sass/lbd/footers";
+
+// Fancy Stuff
+
+@import "../src/assets/sass/lbd/dropdown";
+@import "../src/assets/sass/lbd/cards";
+@import "../src/assets/sass/lbd/chartist";
+@import "../src/assets/sass/lbd/tooltip";
+
 
 aside.sidebar {
-  margin-top: 100px;
+  margin-top: 50px;
   &:before,
   &:after {
     content: none;
@@ -10,14 +33,16 @@ aside.sidebar {
 section.content{
   margin-top: 70px;
 }
+.github-corner{
+  display: none;
+}
 nav.app-nav{
   position: fixed;
   display: flex;
-  height: 100px;
   background-color: white;
   top: 0px;
   margin: 0;
-  z-index: 1;
+  z-index: 2;
   box-shadow: 0 14px 20px -12px rgba(0,0,0,.2);
 }
 .markdown-section pre>code {
@@ -30,7 +55,9 @@ nav.app-nav{
     overflow-x: auto;
   }
 }
-
+.ct-documentation.close{
+  opacity: 1;
+}
 .ct-documentation .content {
   padding-top: 50px;
   h3 {
@@ -227,6 +254,9 @@ nav.app-nav{
     padding: 10px 0;
     float: none;
     width: 100%;
+  }
+  .ct-documentation .navbar-default .navbar-toggle {
+    display: none;
   }
 }
 .components .nav.nav-pills.nav-stacked{
