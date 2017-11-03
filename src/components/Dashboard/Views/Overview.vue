@@ -137,11 +137,11 @@
                      :columns="tableData.columns">
               <template slot="columns"></template>
 
-              <template slot-scope="props">
+              <template slot-scope="{row}">
                 <td>
-                  <Checkbox v-model="props.item.checked"></Checkbox>
+                  <Checkbox v-model="row.checked"></Checkbox>
                 </td>
-                <td>{{props.item.title}}</td>
+                <td>{{row.title}}</td>
                 <td class="td-actions text-right">
                   <button type="button" class="btn-simple btn btn-xs btn-info" v-tooltip.top-center="editTooltip">
                     <i class="fa fa-edit"></i>
