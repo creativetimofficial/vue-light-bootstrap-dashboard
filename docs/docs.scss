@@ -45,6 +45,49 @@ nav.app-nav{
   z-index: 2;
   box-shadow: 0 14px 20px -12px rgba(0,0,0,.2);
 }
+
+.ct-documentation {
+  .navbar-nav > li > .dropdown-menu, .dropdown .dropdown-menu{
+    @include transform-scale(0);
+    @include transition($slow-transition-time, $transition-bezier);
+  }
+  .navbar-nav > li.open > .dropdown-menu, .dropdown.open .dropdown-menu{
+    @include transform-scale(1);
+    @include transform-origin($dropdown-coordinates);
+
+  }
+
+  .navbar-nav > li > .dropdown-menu:before{
+    border-bottom: 11px solid rgba(0, 0, 0, 0.2);
+    border-left: 11px solid rgba(0, 0, 0, 0);
+    border-right: 11px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 12px;
+    top: -11px;
+  }
+  .navbar-nav > li > .dropdown-menu:after {
+    border-bottom: 11px solid #FFFFFF;
+    border-left: 11px solid rgba(0, 0, 0, 0);
+    border-right: 11px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 12px;
+    top: -10px;
+  }
+
+  .navbar-nav.navbar-right > li > .dropdown-menu:before{
+    left: auto;
+    right: 12px;
+  }
+
+  .navbar-nav.navbar-right > li > .dropdown-menu:after{
+    left: auto;
+    right: 12px;
+  }
+}
 .markdown-section pre>code {
   font-size: 12px;
 }
