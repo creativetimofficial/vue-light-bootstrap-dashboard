@@ -68,6 +68,7 @@ as well as [Bootstrap input groups](https://www.w3schools.com/bootstrap/bootstra
 ```html
 /*vue*/
 <desc>
+ You can use `addonRight` and `addonLeft` slots to fully customize the addons.
 </desc>
 <template>
   <div class="row">
@@ -139,3 +140,10 @@ as well as [Bootstrap input groups](https://www.w3schools.com/bootstrap/bootstra
 | Event Name | Description | Parameters |
 |---------- |-------- |---------- |
 | input  | triggers when the binding value changes (default for v-model) | the updated value |
+
+### Slots
+| Name | Description |
+|---------- |-------- |
+|  label  | content for input label |
+|  addonLeft  | content for input left addon. Refer to bootstrap [form group inputs](https://getbootstrap.com/docs/3.3/components/#input-groups-basic)  |
+|  addonRight  | content for input right addon. Refer to bootstrap [form group inputs](https://getbootstrap.com/docs/3.3/components/#input-groups-basic)  |
