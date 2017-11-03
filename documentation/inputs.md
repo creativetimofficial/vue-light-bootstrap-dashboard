@@ -74,19 +74,19 @@ as well as [Bootstrap input groups](https://www.w3schools.com/bootstrap/bootstra
       <fg-input class="col-xs-6"
                 placeholder="Right icon" 
                 addon-right-icon="fa fa-search">
-       </fg-input>
-        <fg-input  class="col-xs-6"
-                   placeholder="Left icon" 
-                   addon-left-icon="fa fa-search">
-        </fg-input>
-        <fg-input  class="col-xs-6"
-                   placeholder="Icon as a button">
-             <div class="input-group-btn" slot="addonRight">
-                   <button class="btn btn-primary">
-                     <i class="fa fa-search"></i>
-                   </button>
-             </div>
-       </fg-input>
+      </fg-input>
+      <fg-input  class="col-xs-6"
+                 placeholder="Left icon" 
+                 addon-left-icon="fa fa-search">
+      </fg-input>
+      <fg-input  class="col-xs-6"
+                 placeholder="Icon as a button">
+           <div class="input-group-btn" slot="addonRight">
+               <button class="btn btn-primary">
+                 <i class="fa fa-search"></i>
+               </button>
+           </div>
+      </fg-input>
   </div>
 </template>
 <script>
@@ -107,12 +107,14 @@ as well as [Bootstrap input groups](https://www.w3schools.com/bootstrap/bootstra
       <fg-input class="col-xs-6"
                 label="Password"
                 placeholder="Password"
+                value="mypassword"
                 type="password">
        </fg-input>
        <fg-input  class="col-xs-6"
                   label="Number"
                   placeholder="Number"
-                  type="number">
+                  value="23"
+                  type="search">
         </fg-input>
   </div>
 </template>
@@ -124,3 +126,16 @@ as well as [Bootstrap input groups](https://www.w3schools.com/bootstrap/bootstra
 
 ```
 
+
+### Attributes
+| Attribute      | Description    | Type      | Accepted values       | Default   |
+|---------- |-------- |---------- |-------------  |-------- |
+| value     | input value   | string  |       —        |     —     |
+| label     | input label  | string  |       —        |     —     |
+| addonRightIcon     | right icon for input (is overriden by addonRight slot)   | string  |       —        |     —     |
+| addonLeftIcon     | left icon for input (is overriden by addonLeft slot)   | string  |       —        |     —     |
+
+### Events
+| Event Name | Description | Parameters |
+|---------- |-------- |---------- |
+| input  | triggers when the binding value changes (default for v-model) | the updated value |
