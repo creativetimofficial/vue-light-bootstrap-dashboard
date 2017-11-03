@@ -1,5 +1,9 @@
 <template>
-  <li class="dropdown" :class="{open:isOpen}" @click="toggleDropDown" v-click-outside="closeDropDown">
+  <li class="dropdown"
+      :is="tag"
+      :class="{open:isOpen}"
+      @click="toggleDropDown"
+      v-click-outside="closeDropDown">
     <a class="dropdown-toggle btn-rotate" data-toggle="dropdown" href="javascript:void(0)">
       <slot name="title">
         <i :class="icon"></i>
@@ -13,10 +17,16 @@
   </li>
 </template>
 <script>
+
   export default{
+    name: 'drop-down',
     props: {
       title: String,
-      icon: String
+      icon: String,
+      tag: {
+        type: String,
+        default: 'li'
+      }
     },
     data () {
       return {
@@ -26,9 +36,11 @@
     methods: {
       toggleDropDown () {
         this.isOpen = !this.isOpen
+        this.$emit('change', this.isOpen)
       },
       closeDropDown () {
         this.isOpen = false
+        this.$emit('change', this.isOpen)
       }
     }
   }

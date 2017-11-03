@@ -16,6 +16,7 @@
 </template>
 <script>
   export default {
+    name: 'l-table',
     props: {
       columns: Array,
       data: Array,
