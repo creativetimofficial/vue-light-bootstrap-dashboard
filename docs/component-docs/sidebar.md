@@ -1,3 +1,4 @@
 - [Buttons](/buttons.md)
 - [Checkboxes](/checkboxes.md)
 - [Radio](/radio.md)
+- [Inputs](/inputs.md)

@@ -1,10 +1,24 @@
 @import "../src/assets/sass/light-bootstrap-dashboard";
 
 aside.sidebar {
+  margin-top: 100px;
   &:before,
   &:after {
     content: none;
   }
+}
+section.content{
+  margin-top: 70px;
+}
+nav.app-nav{
+  position: fixed;
+  display: flex;
+  height: 100px;
+  background-color: white;
+  top: 0px;
+  margin: 0;
+  z-index: 1;
+  box-shadow: 0 14px 20px -12px rgba(0,0,0,.2);
 }
 .markdown-section pre>code {
   font-size: 12px;
@@ -78,3 +92,146 @@ aside.sidebar {
   opacity: 0;
 }
 
+.components .navbar{
+  -webkit-transition: all 150ms linear;
+  -o-transition: all 150ms linear;
+  transition: all 150ms linear;
+  max-height: 70px;
+}
+.components .navbar-title{
+  height: 100%;
+}
+.components .navbar-title h4{
+  line-height: 12px;
+  margin-top: 16px;
+  margin-bottom: 5px;
+}
+
+.components .navbar-title img{
+  width: 100%
+}
+.components .header-wrapper .navbar-default .btn{
+  color: #444;
+}
+.components .navbar-center{
+  float: none;
+  display: inline-block;
+}
+.components .navbar-title .image-container{
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  top: -3px;
+  position: relative;
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.components .logo-container .logo{
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  width: 50px;
+  float: left;
+}
+.components .header-wrapper {
+  position: relative;
+  height: 500px;
+}
+
+.components .header-wrapper .header {
+  background-position: center center;
+  background-size: cover;
+  height: 450px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.components .header-wrapper .header .filter::after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1DC7EA), color-stop(100%, rgba(5, 143, 170, 0.6)));
+  background: -webkit-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);
+  background: -o-linear-gradient(top, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1DC7EA), to(rgba(5, 143, 170, 0.6)));
+  background: linear-gradient(to bottom, #1DC7EA 0%, rgba(5, 143, 170, 0.6) 100%);
+  content: "";
+  display: block;
+  height: 450px;
+  left: 0;
+  opacity: 0.77;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.components .header-wrapper .title-container{
+  color: #fff;
+  position: relative;
+  top: 85px;
+  z-index: 3;
+
+}
+.components .logo-container .brand{
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 20px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+.components .navbar-default .logo-container .brand{
+  color: #444;
+}
+.components .navbar-default.navbar-transparent .logo-container .brand{
+  color: #FFFFFF;
+}
+.components .navbar-default.navbar-transparent .navbar-nav>li>a{
+  color: #FFFFFF;
+}
+.components .logo-container{
+  margin-top: 10px;
+}
+.components .logo-container .logo img{
+  width: 100%;
+}
+.components .navbar-small .logo-container .brand{
+  color: #333333;
+}
+
+.components .navbar.navbar-transparent{
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  border: 0;
+  padding-top: 0px;
+}
+
+@media (max-width: 1199px) {
+
+  .components .navbar .navbar-brand {
+    height: 50px;
+    padding: 10px 15px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .components .footer .copyright {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    float: none;
+    width: 100%;
+  }
+}
+.components .nav.nav-pills.nav-stacked{
+  top: 100px;
+}
+
+// WEBPACK FOOTER //
+// ./src/containers/Components/assets/css/Components.css

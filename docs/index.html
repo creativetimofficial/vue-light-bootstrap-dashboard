@@ -3,33 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>vue-light-bootstrap-dashboard - Vue light bootstrap dashboard</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="description" content="Vue light bootstrap dashboard">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/docsify/lib/themes/vue.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//unpkg.com/docsify-copy-code/styles.css">
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="//unpkg.com/docsify-copy-code/index.js"></script>
 </head>
-<body class="ct-documentation">
-  <div id="app"></div>
+<body class="ct-documentation components">
+<nav class="navbar navbar-default navbar-fixed-top navbar-color-on-scroll">
+  <div class="container">
+    <div class="navbar-header">
+      <button id="menu-toggle" type="button" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span
+        class="icon-bar bar1"></span><span class="icon-bar bar2"></span><span class="icon-bar bar3"></span></button>
+      <a href="http://www.creative-tim.com" target="_blank" rel="noopener noreferrer">
+        <div class="logo-container">
+          <div class="logo"><img
+            src="data:image/png;base64,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"
+            alt="Creative Tim Logo"></div>
+          <div class="brand">Creative Tim</div>
+        </div>
+      </a></div>
+    <div class="collapse navbar-collapse text-center">
+      <ul class="nav navbar-nav navbar-center">
+        <li>
+          <div class="navbar-title text-center">
+            <h4>
+              <div class="image-container"><img src="https://vuejs.org/images/logo.png" alt="Vue Logo"></div>
+                LBD Vue Free
+            </h4>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/cristijora/vue-light-bootstrap-dashboard/issues" target="_blank"
+               rel="noopener noreferrer" class="btn btn-simple btn-default"><i class="fa fa-bug"></i>
+           Report bug</a></li>
+        <li><a href="https://github.com/cristijora/vue-light-bootstrap-dashboard" target="_blank"
+               rel="noopener noreferrer" class="btn btn-default btn-simple"><i class="fa fa-github"></i>Contribute</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="app"></div>
 </body>
 
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
 <script>
   var jsResources = '<scr' + 'ipt src="https://unpkg.com/vue/dist/vue.js"></scr' + 'ipt>'
   var cssResources = '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");'
   var bootCode = 'var globalVariable = "leon"'
 
   window.$docsify = {
+    homepage: 'https://raw.githubusercontent.com/cristijora/vue-light-bootstrap-dashboard/master/README.md',
     name: 'vue-light-bootstrap-dashboard',
     repo: 'cristijora/vue-light-bootstrap-dashboard',
     loadSidebar: 'sidebar.md',
+    themeColor: '#1DC7EA',
+    auto2top: true,
     plugins: [
-      DemoBoxVue.create(jsResources, cssResources, bootCode)
+      DemoBoxVue.create(jsResources, cssResources, bootCode),
+      window.DocsifyCopyCodePlugin.init()
     ]
   }
 </script>
+
 <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
 </html>
