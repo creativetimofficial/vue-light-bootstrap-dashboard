@@ -5,3 +5,4 @@
 - [Dropdown](/dropdown.md)
 - [Tables](/tables.md)
 - [Tooltips](/tooltips.md)
+- [Notifications](/notifications.md)
