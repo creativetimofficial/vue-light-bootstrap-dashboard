@@ -3,7 +3,9 @@ import {create} from './demo-block/plugin'
 import Components from '../src/components/UIComponents'
 const Vue = window.Vue
 import { directive as vClickOutside } from 'vue-clickaway'
+import VTooltip from 'v-tooltip'
 window.Vue.directive('click-outside', vClickOutside)
+window.Vue.directive(VTooltip)
 
 for (let key in Components) {
   const toRegister = Components[key]

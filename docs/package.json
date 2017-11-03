@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "marked": "^0.3.6",
+    "v-tooltip": "^2.0.0-rc.14",
     "vue": "^2.5.2",
     "vue-clickaway": "^2.1.0"
   },
