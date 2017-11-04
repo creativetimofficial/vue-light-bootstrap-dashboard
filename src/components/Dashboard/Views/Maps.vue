@@ -1,5 +1,5 @@
 <template>
-  <div id='map'></div>
+  <div id="map"></div>
 </template>
 <script>
   import {API_KEY} from './Maps/API_KEY'
@@ -71,6 +71,6 @@
 </script>
 <style>
   #map {
-    height: calc(100vh - 130px);
+    min-height: calc(100vh - 123px);
   }
 </style>

@@ -9,7 +9,7 @@
   export default {}
 </script>
 <style lang="scss">
-  .vue-notifyjs{
+  .vue-notifyjs.notifications{
     .list-move {
       transition: transform 0.3s, opacity 0.4s;
     }
