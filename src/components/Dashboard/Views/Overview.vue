@@ -63,7 +63,7 @@
         <div class="col-md-8">
           <chart-card :chart-data="lineChart.data"
                       :chart-options="lineChart.options"
-                      :chart-responsive-options="lineChart.responsiveOptions">
+                      :responsive-options="lineChart.responsiveOptions">
             <template slot="header">
               <h4 class="title">Users Behavior</h4>
               <p class="category">24 Hours performance</p>

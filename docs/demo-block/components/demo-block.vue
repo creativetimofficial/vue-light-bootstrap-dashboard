@@ -119,7 +119,7 @@
 
       codeAreaHeight () {
         if (this.$el.getElementsByClassName('description').length > 0) {
-          return Math.max(this.$el.getElementsByClassName('description')[0].clientHeight, this.$el.getElementsByClassName('highlight')[0].clientHeight);
+          return this.$el.getElementsByClassName('description')[0].clientHeight + this.$el.getElementsByClassName('highlight')[0].clientHeight
         }
         return this.$el.getElementsByClassName('highlight')[0].clientHeight;
       },

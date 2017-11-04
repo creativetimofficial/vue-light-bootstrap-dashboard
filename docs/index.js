@@ -5,10 +5,12 @@ const Vue = window.Vue
 import { directive as vClickOutside } from '../node_modules/vue-clickaway'
 import VTooltip from '../node_modules/v-tooltip'
 import '../node_modules/vue-notifyjs/themes/default.css'
+import Chartist from '../node_modules/chartist'
 import VueNotify from '../node_modules/vue-notifyjs'
 window.Vue.directive('click-outside', vClickOutside)
 window.Vue.directive(VTooltip)
 window.Vue.use(VueNotify)
+window.Chartist = Chartist
 
 for (let key in Components) {
   const toRegister = Components[key]

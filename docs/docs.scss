@@ -116,6 +116,13 @@ nav.app-nav{
     left: auto;
     right: 12px;
   }
+  .card.chart-card {
+    height: 530px;
+    .content {
+      position: relative;
+      left: 0;
+    }
+  }
 }
 .markdown-section pre>code {
   font-size: 12px;

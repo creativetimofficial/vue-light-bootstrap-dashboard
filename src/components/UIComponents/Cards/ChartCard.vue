@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <Card class="chart-card">
     <div class="card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
@@ -52,6 +52,7 @@
       initChart () {
         var chartIdQuery = `#${this.chartId}`
         this.chart = this.$Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions, this.responsiveOptions)
+        this.$emit('initialized', this.chart)
         if (this.chartType === 'Line') {
           this.animateLineChart()
         }

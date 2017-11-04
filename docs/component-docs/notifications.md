@@ -5,7 +5,7 @@ We restyled the classic Bootstrap Alert and gave it a more attractive look.
 We used [Vue-notifyjs](https://github.com/cristijora/vue-notifyjs) to easily add notifications from anywhere within the app.
 
 ## Usage
-To use Vue-notifyjs, you have to import it and declareit as a plugin.
+To use Vue-notifyjs, you have to import it and declare it as a plugin.
 ```js
 import VueNotify from 'vue-notifyjs'
 import 'vue-notifyjs/themes/default.css'

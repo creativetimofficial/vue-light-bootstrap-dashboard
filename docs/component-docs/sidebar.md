@@ -6,3 +6,6 @@
 - [Tables](/tables.md)
 - [Tooltips](/tooltips.md)
 - [Notifications](/notifications.md)
+- [Charts](/charts.md)
+- [Cards](/cards.md)
+- [Maps](/maps.md)
