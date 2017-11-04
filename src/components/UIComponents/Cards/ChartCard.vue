@@ -10,20 +10,13 @@
 </template>
 <script>
   import Card from './Card.vue'
+
   export default {
     components: {
       Card
     },
     name: 'chart-card',
     props: {
-      footerText: {
-        type: String,
-        default: ''
-      },
-      headerTitle: {
-        type: String,
-        default: 'Chart title'
-      },
       chartType: {
         type: String,
         default: 'Line' // Line | Pie | Bar
@@ -42,12 +35,14 @@
             series: []
           }
         }
-      }
+      },
+      responsiveOptions: [Object, Array],
     },
     data () {
       return {
         chartId: 'no-id',
-        $Chartist: null
+        $Chartist: null,
+        chart: null,
       }
     },
     methods: {
@@ -56,18 +51,73 @@
        */
       initChart () {
         var chartIdQuery = `#${this.chartId}`
-        this.$Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions)
+        this.chart = this.$Chartist[this.chartType](chartIdQuery, this.chartData, this.chartOptions, this.responsiveOptions)
+        if (this.chartType === 'Line') {
+          this.animateLineChart()
+        }
+        if (this.chartType === 'Bar') {
+          this.animateBarChart()
+        }
       },
       /***
        * Assigns a random id to the chart
        */
       updateChartId () {
-        var currentTime = new Date().getTime().toString()
-        var randomInt = this.getRandomInt(0, currentTime)
+        const currentTime = new Date().getTime().toString()
+        const randomInt = this.getRandomInt(0, currentTime)
         this.chartId = `div_${randomInt}`
       },
       getRandomInt (min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min
+      },
+      animateLineChart () {
+        let seq = 0
+        let durations = 500
+        let delays = 80
+        this.chart.on('draw', (data) => {
+          if (data.type === 'line' || data.type === 'area') {
+            data.element.animate({
+              d: {
+                begin: 600,
+                dur: 700,
+                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                to: data.path.clone().stringify(),
+                easing: this.$Chartist.Svg.Easing.easeOutQuint
+              }
+            })
+          } else if (data.type === 'point') {
+            seq++
+            data.element.animate({
+              opacity: {
+                begin: seq * delays,
+                dur: durations,
+                from: 0,
+                to: 1,
+                easing: 'ease'
+              }
+            })
+          }
+        })
+        seq = 0
+      },
+      animateBarChart () {
+        let seq = 0
+        let durations = 500
+        let delays = 80
+        this.chart.on('draw', (data) => {
+          if (data.type === 'bar') {
+            seq++
+            data.element.animate({
+              opacity: {
+                begin: seq * delays,
+                dur: durations,
+                from: 0,
+                to: 1,
+                easing: 'ease'
+              }
+            })
+          }
+        })
       }
     },
     async mounted () {
