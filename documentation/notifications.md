@@ -116,4 +116,4 @@ Vue-notifyjs has a default `list` transition which you can change through css in
 </style>
 ```
 
-For detailed usage please check out [Vue-notifyjs repo](https://github.com/cristijora/vue-notifyjs)
+!> **Note** For detailed usage please check out [Vue-notifyjs repo](https://github.com/cristijora/vue-notifyjs)
