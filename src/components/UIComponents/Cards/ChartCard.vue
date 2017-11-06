@@ -37,13 +37,13 @@
           }
         }
       },
-      responsiveOptions: [Object, Array],
+      responsiveOptions: [Object, Array]
     },
     data () {
       return {
         chartId: 'no-id',
         $Chartist: null,
-        chart: null,
+        chart: null
       }
     },
     methods: {
