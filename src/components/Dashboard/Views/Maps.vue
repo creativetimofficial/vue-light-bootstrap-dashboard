@@ -1,19 +1,32 @@
 <template>
-  <div id="map"></div>
+  <gmap-map
+    id="map"
+    :center="center"
+    :zoom="13"
+    :options="options"
+    map-type-id="terrain"
+  >
+    <gmap-marker :position="center">
+    </gmap-marker>
+  </gmap-map>
 </template>
 <script>
   import {API_KEY} from './Maps/API_KEY'
-  import GoogleMapsLoader from 'google-maps'
-
-  GoogleMapsLoader.KEY = API_KEY
+  import Vue from 'vue'
+  import * as VueGoogleMaps from 'vue2-google-maps'
+  Vue.use(VueGoogleMaps, {
+    load: {
+      key: API_KEY
+    }
+  })
   export default {
-    methods: {
-      initMap (google) {
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428)
-        var mapOptions = {
-          zoom: 13,
-          center: myLatlng,
-          scrollwheel: false, // we disable de scroll over the map, it is a really annoing when you scroll through page
+    data () {
+      return {
+        center: {
+          lat: 40.748817,
+          lng: -73.985428
+        },
+        options: {
           styles: [{
             'featureType': 'water',
             'stylers': [{'saturation': 43}, {'lightness': -11}, {'hue': '#0088ff'}]
@@ -53,20 +66,8 @@
             'stylers': [{'visibility': 'simplified'}]
           }]
         }
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions)
-        var marker = new google.maps.Marker({
-          position: myLatlng,
-          title: 'Hello World!'
-        })
-        // To add the marker to the map, call setMap();
-        marker.setMap(map)
       }
     },
-    mounted () {
-      GoogleMapsLoader.load((google) => {
-        this.initMap(google)
-      })
-    }
   }
 </script>
 <style>

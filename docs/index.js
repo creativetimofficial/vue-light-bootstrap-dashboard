@@ -7,9 +7,16 @@ import VTooltip from '../node_modules/v-tooltip'
 import '../node_modules/vue-notifyjs/themes/default.css'
 import Chartist from '../node_modules/chartist'
 import VueNotify from '../node_modules/vue-notifyjs'
-window.Vue.directive('click-outside', vClickOutside)
-window.Vue.directive(VTooltip)
-window.Vue.use(VueNotify)
+import * as VueGoogleMaps from 'vue2-google-maps'
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAamVCoyQ4AuvBpxVRMs9P-HFkfPVQj0Kw'
+  }
+})
+
+Vue.directive('click-outside', vClickOutside)
+Vue.directive(VTooltip)
+Vue.use(VueNotify)
 window.Chartist = Chartist
 
 for (let key in Components) {

@@ -23,7 +23,8 @@
     "vue": "^2.5.2",
     "vue-clickaway": "^2.1.0",
     "vue-notifyjs": "^0.2.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.8.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
