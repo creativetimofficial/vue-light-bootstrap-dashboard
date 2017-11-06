@@ -7,7 +7,7 @@
     <a class="dropdown-toggle btn-rotate" data-toggle="dropdown" href="javascript:void(0)">
       <slot name="title">
         <i :class="icon"></i>
-         {{title}}
+        {{title}}
         <b class="caret"></b>
       </slot>
     </a>
@@ -17,8 +17,7 @@
   </li>
 </template>
 <script>
-
-  export default{
+  export default {
     name: 'drop-down',
     props: {
       title: String,
