@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <Card>
+          <card>
             <template slot="header">
               <h4 class="title">Striped Table with Hover</h4>
               <p class="category">Here is a subtitle for this table</p>
@@ -14,12 +14,12 @@
                        :data="table1.data">
               </l-table>
             </div>
-          </Card>
+          </card>
 
         </div>
 
         <div class="col-md-12">
-          <Card class="card-plain">
+          <card class="card-plain">
             <template slot="header">
               <h4 class="title">Table on Plain Background</h4>
               <p class="category">Here is a subtitle for this table</p>
@@ -30,7 +30,7 @@
                        :data="table2.data">
               </l-table>
             </div>
-          </Card>
+          </card>
         </div>
 
       </div>
