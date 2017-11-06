@@ -1,5 +1,5 @@
 <template>
-  <Card class="card-stats">
+  <card class="card-stats">
     <div class="row">
       <div class="col-xs-5" v-if="$slots.header">
         <slot name="header"></slot>
@@ -12,7 +12,7 @@
       <hr/>
       <slot name="footer"></slot>
     </div>
-  </Card>
+  </card>
 </template>
 <script>
   import Card from './Card.vue'

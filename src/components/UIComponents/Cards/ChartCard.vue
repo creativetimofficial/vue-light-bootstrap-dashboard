@@ -1,12 +1,14 @@
 <template>
-  <Card class="chart-card">
+  <card class="chart-card">
     <div class="card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
     <div :id="chartId" class="ct-chart"></div>
-    <slot name="footer">
-    </slot>
-  </Card>
+    <div class="footer" v-if="$slots.footer">
+      <hr>
+      <slot name="footer"></slot>
+    </div>
+  </card>
 </template>
 <script>
   import Card from './Card.vue'

@@ -9,7 +9,10 @@
     <div class="content">
       <slot></slot>
     </div>
-    <slot name="footer"></slot>
+    <div class="footer" v-if="$slots.footer">
+      <hr>
+      <slot name="footer"></slot>
+    </div>
   </div>
 </template>
 <script>
