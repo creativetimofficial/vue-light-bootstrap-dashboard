@@ -21,13 +21,13 @@ module.exports = function (config) {
     webpack: webpackConfig,
     webpackMiddleware: {
       noInfo: true
-  },
+    },
     coverageReporter: {
       dir: './coverage',
-        reporters: [
+      reporters: [
         { type: 'lcov', subdir: '.' },
         { type: 'text-summary' }
       ]
-      }
-      })
-  }
+    }
+  })
+}
