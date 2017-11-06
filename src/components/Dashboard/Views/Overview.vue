@@ -4,13 +4,13 @@
       <div class="row">
         <div class="col-lg-3 col-sm-6">
           <stats-card>
-            <div slot="header" class="icon-big text-center icon-warning">
+            <div slot="header" class="icon-warning">
               <i class="pe-7s-server text-warning"></i>
             </div>
-            <div slot="content" class="numbers">
+            <div slot="content">
               <p>Capacity</p>105GB
             </div>
-            <div slot="footer" class="stats">
+            <div slot="footer">
               <i class="fa fa-refresh"></i>Updated now
             </div>
           </stats-card>
@@ -18,13 +18,13 @@
 
         <div class="col-lg-3 col-sm-6">
           <stats-card>
-            <div slot="header" class="icon-big text-center icon-success">
+            <div slot="header" class="icon-success">
               <i class="pe-7s-wallet text-success"></i>
             </div>
-            <div slot="content" class="numbers">
+            <div slot="content">
               <p>Revenue</p>$1,345
             </div>
-            <div slot="footer" class="stats">
+            <div slot="footer">
               <i class="fa fa-calendar-o"></i>Last day
             </div>
           </stats-card>
@@ -32,13 +32,13 @@
 
         <div class="col-lg-3 col-sm-6">
           <stats-card>
-            <div slot="header" class="icon-big text-center icon-danger">
+            <div slot="header" class="icon-danger">
               <i class="pe-7s-graph1 text-danger"></i>
             </div>
-            <div slot="content" class="numbers">
+            <div slot="content">
               <p>Errors</p>23
             </div>
-            <div slot="footer" class="stats">
+            <div slot="footer">
               <i class="fa fa-clock-o"></i>Last day
             </div>
           </stats-card>
@@ -46,13 +46,13 @@
 
         <div class="col-lg-3 col-sm-6">
           <stats-card>
-            <div slot="header" class="icon-big text-center icon-info">
+            <div slot="header" class="icon-info">
               <i class="fa fa-twitter text-info"></i>
             </div>
-            <div slot="content" class="numbers">
+            <div slot="content">
               <p>Followers</p>+45
             </div>
-            <div slot="footer" class="stats">
+            <div slot="footer">
               <i class="fa fa-refresh"></i>Updated now
             </div>
           </stats-card>
@@ -95,7 +95,7 @@
                 <i class="fa fa-circle text-warning"></i> Unsubscribe
               </div>
               <hr>
-              <div class="stats">
+              <div>
                 <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
               </div>
             </template>
@@ -120,7 +120,7 @@
                 <i class="fa fa-circle text-danger"></i> BMW 5 Series
               </div>
               <hr>
-              <div class="stats">
+              <div>
                 <i class="fa fa-check"></i> Data information certified
               </div>
             </template>
@@ -171,6 +171,7 @@
   import Card from 'src/components/UIComponents/Cards/Card.vue'
   import LTable from 'src/components/UIComponents/Table.vue'
   import Checkbox from 'src/components/UIComponents/Inputs/Checkbox.vue'
+
   export default {
     components: {
       Checkbox,
@@ -255,7 +256,10 @@
           data: [
             {title: 'Sign contract for "What are conference organizers afraid of?"', checked: false},
             {title: 'Lines From Great Russian Literature? Or E-mails From My Boss?', checked: true},
-            {title: 'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit', checked: true},
+            {
+              title: 'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
+              checked: true
+            },
             {title: 'Create 4 Invisible User Experiences you Never Knew About', checked: false},
             {title: 'Read "Following makes Medium better"', checked: false},
             {title: 'Unfollow 5 enemies from twitter', checked: false}
