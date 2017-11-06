@@ -5,7 +5,6 @@
     </div>
     <div :id="chartId" class="ct-chart"></div>
     <div class="footer" v-if="$slots.footer">
-      <hr>
       <slot name="footer"></slot>
     </div>
   </card>
@@ -14,10 +13,10 @@
   import Card from './Card.vue'
 
   export default {
+    name: 'chart-card',
     components: {
       Card
     },
-    name: 'chart-card',
     props: {
       chartType: {
         type: String,

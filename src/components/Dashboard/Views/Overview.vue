@@ -128,7 +128,7 @@
         </div>
 
         <div class="col-md-6">
-          <Card>
+          <card>
             <template slot="header">
               <h5 class="title">Tasks</h5>
               <p class="category">Backend development</p>
@@ -155,10 +155,10 @@
             <div class="footer">
               <hr>
               <div class="stats">
-                <i class="now-ui-icons loader_refresh spin"></i> Updated 3 minutes ago
+                <i class="fa fa-history"></i> Updated 3 minutes ago
               </div>
             </div>
-          </Card>
+          </card>
 
         </div>
       </div>

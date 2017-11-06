@@ -43,7 +43,7 @@
     &:hover .btn-hover{
         @include opacity(1);
     }
-    .content{
+    .card-content{
         padding: 15px 15px 10px 15px;
     }
     .header{
@@ -179,7 +179,7 @@
     .title{
         line-height: 24px;
     }
-    .content{
+    .card-content{
         min-height: 240px;
     }
 }
