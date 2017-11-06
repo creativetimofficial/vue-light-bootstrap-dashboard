@@ -63,7 +63,7 @@ We've already covered `ChartCard` in the previous section [charts](charts?id=cha
 </desc>
 <template>
 <stats-card>
-  <div slot="header" class="icon-big text-center icon-warning">
+  <div slot="header" class="icon-warning">
     <i class="fa fa-server text-warning"></i>
   </div>
   <div slot="content" class="numbers">
@@ -80,3 +80,16 @@ We've already covered `ChartCard` in the previous section [charts](charts?id=cha
 </script>
 ```
 
+### StatsCard Slots
+| Name | Description |
+|---------- |-------- |
+|  content  | Content for card body |
+|  header  | Content for card header |
+|  footer  | Content for card footer |
+
+### Card Slots
+| Name | Description |
+|---------- |-------- |
+|  default  | Content for card body |
+|  header  | Content for card header |
+|  footer  | Content for card footer |
