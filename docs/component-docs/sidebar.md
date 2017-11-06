@@ -1,3 +1,4 @@
+- [Getting started](/getting-started.md)
 - [Buttons](/buttons.md)
 - [Checkboxes](/checkboxes.md)
 - [Radio](/radio.md)
