@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
-    <side-bar>
+    <side-bar :background-color="sidebarBackground"
+              :background-image="sidebarBackgroundImage"
+              >
       <sidebar-link to="/admin/overview">
         <i class="pe-7s-graph"></i>
         <p>Dashboard</p>
@@ -30,6 +32,10 @@
         <p>Notifications</p>
       </sidebar-link>
     </side-bar>
+    <sidebar-share :color.sync="sidebarBackground"
+                   :image.sync="sidebarBackgroundImage">
+
+    </sidebar-share>
     <div class="main-panel">
       <top-navbar></top-navbar>
 
@@ -48,12 +54,20 @@
   import TopNavbar from './TopNavbar.vue'
   import ContentFooter from './ContentFooter.vue'
   import DashboardContent from './Content.vue'
+  import SidebarShare from './SidebarSharePlugin.vue'
 
   export default {
     components: {
       TopNavbar,
       ContentFooter,
-      DashboardContent
+      DashboardContent,
+      SidebarShare
+    },
+    data () {
+      return {
+        sidebarBackground: 'blue',
+        sidebarBackgroundImage: 'static/img/sidebar-5.jpg'
+      }
     },
     methods: {
       toggleSidebar () {
