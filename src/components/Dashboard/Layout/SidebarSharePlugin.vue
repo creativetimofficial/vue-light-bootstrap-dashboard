@@ -39,7 +39,7 @@
 
         <li class="button-container">
           <social-sharing url="https://cristijora.github.io/vue-light-bootstrap-dashboard/" inline-template
-                          title="Vue Light Bootstrap Dashboard - Free Bootstrap Admin Template for Vue.js"
+                          title="Vue Light Bootstrap Dashboard - Free Admin Template for Vue.js"
                           hashtags="vuejs, dashboard, bootstrap" twitter-user="creativetim">
             <div>
               <network network="facebook" class="btn btn-facebook btn-icon">
