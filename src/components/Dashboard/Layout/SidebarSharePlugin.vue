@@ -186,7 +186,8 @@
     margin: 0 auto;
   }
 
-  .fixed-plugin .badge {
+  .fixed-plugin .badge,
+  .fixed-plugin .bade:empty{
     border: 3px solid #FFFFFF;
     border-radius: 50%;
     cursor: pointer;
