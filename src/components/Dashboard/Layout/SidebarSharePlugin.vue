@@ -187,7 +187,7 @@
   }
 
   .fixed-plugin .badge,
-  .fixed-plugin .bade:empty{
+  .fixed-plugin .badge:empty{
     border: 3px solid #FFFFFF;
     border-radius: 50%;
     cursor: pointer;
