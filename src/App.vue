@@ -6,10 +6,27 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    mounted () {
+      const notification = {
+        template: `<span>Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer.</span>`
+      }
+
+      this.$notifications.notify(
+        {
+          component: notification,
+          icon: 'pe-7s-gift',
+          type: 'info',
+          horizontalAlign: 'center'
+        })
+    }
+  }
 </script>
 <style lang="scss">
-  .vue-notifyjs.notifications{
+  .vue-notifyjs.notifications {
+    .alert {
+      z-index: 10000;
+    }
     .list-move {
       transition: transform 0.3s, opacity 0.4s;
     }
