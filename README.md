@@ -11,11 +11,11 @@ Check the [Live Demo here](https://github.com/cristijora/vue-light-bootstrap-das
 
 ## [Documentation](https://cristijora.github.io/vue-light-bootstrap-dashboard/documentation/#/buttons)
 
-## Build Setup
+## :cloud: Build Setup
 
 ### install dependencies
 `npm install`
-### serve with hot reload at localhost:8080
+### serve with hot reload at localhost:8000
 `npm run dev`
 ### build for production with minification
 `npm run build`
@@ -24,7 +24,7 @@ Check the [Live Demo here](https://github.com/cristijora/vue-light-bootstrap-das
 ### run and watch unit tests
 `npm run unit:watch`
 
-## Contribution guide
+## :clipboard: Contribution guide
 * `npm install` or `yarn install`
 * Please don't use jQuery or jQuery based plugins since there are many pure Vue alternatives
 
