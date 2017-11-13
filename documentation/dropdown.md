@@ -29,11 +29,11 @@ You can specify the tag you the drop-down to be rendered as through the `tag` pr
 </desc>
 <template>
 <drop-down tag="div" title="Simple">
-  <li><a>Notification 1</a></li>
-  <li><a>Notification 2</a></li>
-  <li><a>Notification 3</a></li>
-  <li><a>Notification 4</a></li>
-  <li><a>Another notification</a></li>
+  <a class="dropdown-item">Notification 1</a>
+  <a class="dropdown-item">Notification 2</a>
+  <a class="dropdown-item">Notification 3</a>
+  <a class="dropdown-item">Notification 4</a>
+  <a class="dropdown-item">Another notification</a>
 </drop-down>
 </template>
 
@@ -54,11 +54,11 @@ You can specify the tag you the drop-down to be rendered as through the `tag` pr
     <span class="text-danger">5</span>
     <b class="caret"></b>
   </template>
-  <li><a href="#">Notification 1</a></li>
-  <li><a href="#">Notification 2</a></li>
-  <li><a href="#">Notification 3</a></li>
-  <li><a href="#">Notification 4</a></li>
-  <li><a href="#">Another notification</a></li>
+  <a class="dropdown-item" href="#">Notification 1</a>
+  <a class="dropdown-item" href="#">Notification 2</a>
+  <a class="dropdown-item" href="#">Notification 3</a>
+  <a class="dropdown-item" href="#">Notification 4</a>
+  <a class="dropdown-item" href="#">Another notification</a>
 </drop-down>
 </template>
 

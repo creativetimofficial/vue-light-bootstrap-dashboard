@@ -72,21 +72,13 @@ as well as [Bootstrap input groups](https://www.w3schools.com/bootstrap/bootstra
 </desc>
 <template>
   <div class="row">
-      <fg-input class="col-xs-6"
+      <fg-input class="col-6"
                 placeholder="Right icon" 
                 addon-right-icon="fa fa-search">
       </fg-input>
-      <fg-input  class="col-xs-6"
+      <fg-input  class="col-6"
                  placeholder="Left icon" 
                  addon-left-icon="fa fa-search">
-      </fg-input>
-      <fg-input  class="col-xs-6"
-                 placeholder="Icon as a button">
-           <div class="input-group-btn" slot="addonRight">
-               <button class="btn btn-primary">
-                 <i class="fa fa-search"></i>
-               </button>
-           </div>
       </fg-input>
   </div>
 </template>
@@ -105,13 +97,13 @@ as well as [Bootstrap input groups](https://www.w3schools.com/bootstrap/bootstra
 </desc>
 <template>
   <div class="row">
-      <fg-input class="col-xs-6"
+      <fg-input class="col-sm-6 col-12"
                 label="Password"
                 placeholder="Password"
                 value="mypassword"
                 type="password">
        </fg-input>
-       <fg-input  class="col-xs-6"
+       <fg-input  class="col-sm-6 col-12"
                   label="Number"
                   placeholder="Number"
                   value="23"

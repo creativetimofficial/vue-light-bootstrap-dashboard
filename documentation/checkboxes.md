@@ -30,8 +30,8 @@ export default {
        <p-checkbox v-model="unchecked">Unchecked</p-checkbox>
        <p-checkbox  v-model="checked">Checked</p-checkbox>
        
-       <p-checkbox disabled :checked="false">Disabled unchecked</p-checkbox>
-       <p-checkbox disabled :checked="true">Disabled checked</p-checkbox>
+       <p-checkbox :disabled="true" :checked="false">Disabled unchecked</p-checkbox>
+       <p-checkbox :disabled="true" :checked="true">Disabled checked</p-checkbox>
     </div>
 </template>
 

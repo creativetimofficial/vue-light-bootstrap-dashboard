@@ -163,7 +163,7 @@ We also provided animations for `Line` and `Bar` charts inside this component.
 </desc>
 <template>
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-12">
       <chart-card :chart-data="lineChart.data"
                   :chart-options="lineChart.options"
                   :responsive-options="lineChart.responsiveOptions">
