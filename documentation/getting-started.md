@@ -1,9 +1,9 @@
 # Geting started
 
-The Light Bootstrap Dashboard with Vue.js is built on top of Bootstrap 3, 
+The Light Bootstrap Dashboard with Vue.js is built on top of Bootstrap 4, 
 so you can safely use it on your existing or new Bootstrap project.
 
-No line of code from Bootstrap 3 was changed, so you don't have to worry about undesired effects in your work.
+No line of code from Bootstrap 4 was changed, so you don't have to worry about undesired effects in your work.
 
 - Install Nodejs from [Nodejs Official Page](https://nodejs.org/en/)
 - Open your terminal
