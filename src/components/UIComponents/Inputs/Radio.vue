@@ -1,12 +1,14 @@
 <template>
-  <div class="n-radio radio">
-    <input :id="cbId"
-           type="radio"
-           :disabled="disabled"
-           :value="label"
-           v-model="model" />
-    <label :for="cbId">
-      <slot></slot>
+  <div class="form-check-radio">
+    <label :for="cbId" class="form-check-label">
+      <input :id="cbId"
+             type="radio"
+             :disabled="disabled"
+             :value="label"
+             v-model="model" />
+      <span class="form-check-sign">
+        <slot></slot>
+      </span>
     </label>
   </div>
 </template>
