@@ -37,7 +37,7 @@
     props: {
       backgroundColor: {
         type: String,
-        default: '',
+        default: 'blue',
         validator: (value) => {
           let acceptedValues = ['', 'blue', 'azure', 'green', 'orange', 'red', 'purple']
           return acceptedValues.indexOf(value) !== -1
