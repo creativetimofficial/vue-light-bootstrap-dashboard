@@ -1,10 +1,10 @@
 <template>
-  <li class="dropdown"
+  <li class="dropdown nav-item"
       :is="tag"
-      :class="{open:isOpen}"
+      :class="{show: isOpen}"
       @click="toggleDropDown"
       v-click-outside="closeDropDown">
-    <a class="dropdown-toggle btn-rotate" data-toggle="dropdown" href="javascript:void(0)">
+    <a class="dropdown-toggle btn-rotate nav-link" data-toggle="dropdown" href="#">
       <slot name="title">
         <i :class="icon"></i>
         {{title}}

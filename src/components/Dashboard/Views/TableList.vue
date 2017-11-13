@@ -2,14 +2,14 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-12">
           <card>
             <template slot="header">
-              <h4 class="title">Striped Table with Hover</h4>
-              <p class="category">Here is a subtitle for this table</p>
+              <h4 class="card-title">Striped Table with Hover</h4>
+              <p class="card-category">Here is a subtitle for this table</p>
             </template>
-            <div class="table-responsive table-full-width">
-              <l-table class="table table-hover table-striped"
+            <div class="table-responsive">
+              <l-table class="table-hover table-striped"
                        :columns="table1.columns"
                        :data="table1.data">
               </l-table>
@@ -18,14 +18,14 @@
 
         </div>
 
-        <div class="col-md-12">
+        <div class="col-12">
           <card class="card-plain">
             <template slot="header">
-              <h4 class="title">Table on Plain Background</h4>
-              <p class="category">Here is a subtitle for this table</p>
+              <h4 class="card-title">Table on Plain Background</h4>
+              <p class="card-category">Here is a subtitle for this table</p>
             </template>
-            <div class="table-responsive table-full-width">
-              <l-table class="table table-hover"
+            <div class="table-responsive">
+              <l-table class="table-hover"
                        :columns="table2.columns"
                        :data="table2.data">
               </l-table>

@@ -1,23 +1,23 @@
 <template>
   <card>
-    <h4 slot="header" class="title">Edit Profile</h4>
+    <h4 slot="header" class="card-title">Edit Profile</h4>
     <form>
       <div class="row">
         <fg-input type="text"
-                  class="col-md-5"
+                  class="col-md-5 pr-1"
                   label="Company"
                   :disabled="true"
                   placeholder="Paper dashboard"
                   v-model="user.company">
         </fg-input>
         <fg-input type="text"
-                  class="col-md-3"
+                  class="col-md-3 px-1"
                   label="Username"
                   placeholder="Username"
                   v-model="user.username">
         </fg-input>
         <fg-input type="email"
-                  class="col-md-4"
+                  class="col-md-4 pl-1"
                   label="Username"
                   placeholder="Email"
                   v-model="user.email">
@@ -26,13 +26,13 @@
 
       <div class="row">
         <fg-input type="text"
-                  class="col-md-6"
+                  class="col-md-6 pr-1"
                   label="First Name"
                   placeholder="First Name"
                   v-model="user.firstName">
         </fg-input>
         <fg-input type="text"
-                  class="col-md-6"
+                  class="col-md-6 pl-1"
                   label="Last Name"
                   placeholder="Last Name"
                   v-model="user.lastName">
@@ -50,19 +50,19 @@
 
       <div class="row">
         <fg-input type="text"
-                  class="col-md-4"
+                  class="col-md-4 pr-1"
                   label="City"
                   placeholder="City"
                   v-model="user.city">
         </fg-input>
         <fg-input type="text"
-                  class="col-md-4"
+                  class="col-md-4 px-1"
                   label="Country"
                   placeholder="Country"
                   v-model="user.country">
         </fg-input>
         <fg-input type="number"
-                  class="col-md-4"
+                  class="col-md-4 pl-1"
                   label="Postal Code"
                   placeholder="ZIP Code"
                   v-model="user.postalCode">
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-info btn-fill btn-wd" @click.prevent="updateProfile">
+        <button type="submit" class="btn btn-info btn-fill float-right" @click.prevent="updateProfile">
           Update Profile
         </button>
       </div>

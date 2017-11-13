@@ -2,7 +2,7 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-warning">
               <i class="pe-7s-server text-warning"></i>
@@ -16,7 +16,7 @@
           </stats-card>
         </div>
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-success">
               <i class="pe-7s-wallet text-success"></i>
@@ -30,7 +30,7 @@
           </stats-card>
         </div>
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-danger">
               <i class="pe-7s-graph1 text-danger"></i>
@@ -44,7 +44,7 @@
           </stats-card>
         </div>
 
-        <div class="col-lg-3 col-sm-6">
+        <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-info">
               <i class="fa fa-twitter text-info"></i>
@@ -65,8 +65,8 @@
                       :chart-options="lineChart.options"
                       :responsive-options="lineChart.responsiveOptions">
             <template slot="header">
-              <h4 class="title">Users Behavior</h4>
-              <p class="category">24 Hours performance</p>
+              <h4 class="card-title">Users Behavior</h4>
+              <p class="card-category">24 Hours performance</p>
             </template>
             <template slot="footer">
               <div class="legend">
@@ -85,8 +85,8 @@
         <div class="col-md-4">
           <chart-card :chart-data="pieChart.data" chart-type="Pie">
             <template slot="header">
-              <h4 class="title">Email Statistics</h4>
-              <p class="category">Last Campaign Performance</p>
+              <h4 class="card-title">Email Statistics</h4>
+              <p class="card-category">Last Campaign Performance</p>
             </template>
             <template slot="footer">
               <div class="legend">
@@ -111,8 +111,8 @@
             :chart-responsive-options="barChart.responsiveOptions"
             chart-type="Bar">
             <template slot="header">
-              <h4 class="title">2014 Sales</h4>
-              <p class="category">All products including Taxes</p>
+              <h4 class="card-title">2014 Sales</h4>
+              <p class="card-category">All products including Taxes</p>
             </template>
             <template slot="footer">
               <div class="legend">

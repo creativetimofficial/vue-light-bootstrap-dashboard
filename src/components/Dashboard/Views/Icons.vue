@@ -5,8 +5,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="header">
-              <h4 class="title">202 Awesome Stroke Icons</h4>
-              <p class="category">Handcrafted by our friends from <a target="_blank" href="http://themes-pixeden.com/font-demos/7-stroke/index.html">Pixeden</a></p>
+              <h4 class="card-title">202 Awesome Stroke Icons</h4>
+              <p class="card-category">Handcrafted by our friends from <a target="_blank" href="http://themes-pixeden.com/font-demos/7-stroke/index.html">Pixeden</a></p>
             </div>
             <div class="content all-icons">
               <div class="row">

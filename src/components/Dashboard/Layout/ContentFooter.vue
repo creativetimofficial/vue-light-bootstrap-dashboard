@@ -2,13 +2,13 @@
   <footer class="footer">
     <div class="container-fluid">
       <nav>
-        <ul>
+        <ul class="footer-menu">
           <li>
             <router-link :to="{path:'/admin'}">Dashboard</router-link>
           </li>
         </ul>
       </nav>
-      <div class="copyright">
+      <div class="copyright text-center">
         &copy; Coded with
         <i class="fa fa-heart heart"></i> by
         <a href="https://github.com/cristijora" target="_blank">Cristi Jora</a>.

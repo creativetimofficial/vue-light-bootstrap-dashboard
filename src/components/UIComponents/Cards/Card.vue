@@ -1,15 +1,15 @@
 <template>
   <div class="card">
-    <div class="image" v-if="$slots.image">
+    <div class="card-image" v-if="$slots.image">
       <slot name="image"></slot>
     </div>
-    <div class="header" v-if="$slots.header">
+    <div class="card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
-    <div class="card-content">
+    <div class="card-body">
       <slot></slot>
     </div>
-    <div class="footer" v-if="$slots.footer">
+    <div class="card-footer" v-if="$slots.footer">
       <hr>
       <slot name="footer"></slot>
     </div>

@@ -73,15 +73,18 @@
         color: white;
     }
 }
+.alert-primary{
+  background-color: $blue-navbar;
+}
 .alert-info{
-     background-color: $azure-navbar;
+  background-color: $azure-navbar;
 }
 .alert-success {
-    background-color: $green-navbar;
+  background-color: $green-navbar;
 }
 .alert-warning {
-     background-color: $orange-navbar;
+  background-color: $orange-navbar;
 }
 .alert-danger {
-     background-color: $red-navbar;
+  background-color: $red-navbar;
 }

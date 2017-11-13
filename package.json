@@ -13,9 +13,9 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.0.0-beta.2",
     "chartist": "^0.11.0",
-    "element-ui": "^2.0.2",
+    "element-ui": "^2.0.4",
     "es6-promise": "^4.1.1",
     "google-maps": "^3.2.1",
     "v-tooltip": "^2.0.0-rc.1",
