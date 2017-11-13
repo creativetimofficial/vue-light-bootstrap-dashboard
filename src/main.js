@@ -30,7 +30,7 @@ Vue.use(VTooltip)
 // configure router
 const router = new VueRouter({
   routes, // short for routes: routes
-  linkActiveClass: 'active'
+  linkActiveClass: 'nav-item active'
 })
 
 /* eslint-disable no-new */

@@ -1,18 +1,18 @@
 <template>
   <card class="card-stats">
     <div class="row">
-      <div class="col-xs-5" v-if="$slots.header">
+      <div class="col-5" v-if="$slots.header">
         <div class="icon-big text-center">
           <slot name="header"></slot>
         </div>
       </div>
-      <div class="col-xs-7" v-if="$slots.content">
+      <div class="col-7" v-if="$slots.content">
         <div class="numbers">
           <slot name="content"></slot>
         </div>
       </div>
     </div>
-    <div class="footer stats" v-if="$slots.footer">
+    <div class="card-footer stats" v-if="$slots.footer">
       <hr/>
       <slot name="footer"></slot>
     </div>

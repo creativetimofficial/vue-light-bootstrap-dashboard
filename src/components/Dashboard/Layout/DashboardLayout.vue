@@ -3,6 +3,8 @@
     <side-bar :background-color="sidebarBackground"
               :background-image="sidebarBackgroundImage"
               >
+    <side-bar>
+      <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/admin/overview">
         <i class="pe-7s-graph"></i>
         <p>Dashboard</p>
@@ -56,12 +58,14 @@
   import DashboardContent from './Content.vue'
   import SidebarShare from './SidebarSharePlugin.vue'
 
+  import MobileMenu from './MobileMenu.vue'
   export default {
     components: {
       TopNavbar,
       ContentFooter,
       DashboardContent,
-      SidebarShare
+      SidebarShare,
+      MobileMenu
     },
     data () {
       return {

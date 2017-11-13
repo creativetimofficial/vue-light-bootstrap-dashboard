@@ -2,11 +2,11 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-12">
           <card>
             <template slot="header">
-              <h4 class="title">Light Bootstrap Table Heading</h4>
-              <p class="category">Created using Roboto Font Family</p>
+              <h4 class="card-title">Light Bootstrap Table Heading</h4>
+              <p class="card-category">Created using Roboto Font Family</p>
             </template>
             <div class="typo-line">
               <h1><p class="category">Header 1</p>Light Bootstrap Table Heading </h1>

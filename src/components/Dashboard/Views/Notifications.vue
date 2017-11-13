@@ -3,8 +3,8 @@
     <div class="container-fluid">
       <card>
         <template slot="header">
-          <h4 class="title">Notifications</h4>
-          <p class="category">Handcrafted by our friend <a target="_blank" href="https://github.com/cristijora">Cristi Jora</a>. Please checkout the <a
+          <h4 class="card-title">Notifications</h4>
+          <p class="card-category">Handcrafted by our friend <a target="_blank" href="https://github.com/cristijora">Cristi Jora</a>. Please checkout the <a
             href="https://github.com/cristijora/vue-notifyjs" target="_blank">full documentation.</a></p>
 
         </template>
@@ -52,14 +52,14 @@
         <br>
         <br>
         <div class="places-buttons">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
+          <div class="row justify-content-center">
+            <div class="col-6 text-center">
               <h5>Notifications Places
                 <p class="category">Click to view notifications</p>
               </h5>
             </div>
           </div>
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-3 col-md-offset-1">
               <button class="btn btn-default btn-block" @click="notifyVue('top', 'left')">Top Left</button>
             </div>
@@ -70,7 +70,7 @@
               <button class="btn btn-default btn-block" @click="notifyVue('top', 'right')">Top Right</button>
             </div>
           </div>
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-3 col-md-offset-1">
               <button class="btn btn-default btn-block" @click="notifyVue('bottom', 'left')">Bottom Left</button>
             </div>

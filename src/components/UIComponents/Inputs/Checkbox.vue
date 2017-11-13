@@ -1,11 +1,14 @@
 <template>
-  <div class="checkbox" :class="inlineClass">
-    <input :id="cbId"
-           type="checkbox"
-           :disabled="disabled"
-           v-model="model" />
-    <label :for="cbId">
-      <slot></slot>
+  <div class="form-check" :class="inlineClass">
+    <label :for="cbId" class="form-check-label">
+      <input :id="cbId"
+             class="form-check-input"
+             type="checkbox"
+             :disabled="disabled"
+             v-model="model" />
+      <span class="form-check-sign">
+        <slot></slot>
+      </span>
     </label>
   </div>
 </template>
