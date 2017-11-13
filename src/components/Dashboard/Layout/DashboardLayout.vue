@@ -3,7 +3,6 @@
     <side-bar :background-color="sidebarBackground"
               :background-image="sidebarBackgroundImage"
               >
-    <side-bar>
       <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/admin/overview">
         <i class="pe-7s-graph"></i>

@@ -1,24 +1,26 @@
 <template>
   <div class="fixed-plugin" v-click-outside="closeDropDown">
-    <div class="dropdown show-dropdown" :class="{open: isOpen}">
+    <div class="dropdown show-dropdown" :class="{show: isOpen}">
       <a data-toggle="dropdown">
         <i class="fa fa-cog fa-2x" @click="toggleDropDown"> </i>
       </a>
       <ul class="dropdown-menu">
         <li class="header-title">Filters</li>
-        <li class="adjustments-line text-center">
+        <li class="colors-line text-center">
           <a class="switch-trigger background-color">
             <span v-for="item in sidebarColors" class="badge filter"
                   :class="[`badge-${item.color}`,{active:item.active}]"
                   :data-color="item.color"
-                  @click="changeSidebarBackground(item)"></span>
+                  @click="changeSidebarBackground(item)">
+
+            </span>
           </a>
         </li>
         <li class="header-title">Sidebar Images</li>
         <li v-for="image in images"
             :key="image.src"
             :class="{active: image.active}">
-          <a class="img-holder switch-trigger">
+          <a class="img-holder switch-trigger dropdown-item">
             <img @click="changeSidebarImage(image)"
                  :src="image.src"
                  alt="..."></a>
@@ -399,7 +401,13 @@
 
       transform-origin: 0 0;
     }
-    .fixed-plugin .dropdown.open .dropdown-menu {
+
+    .fixed-plugin .dropdown-menu li.colors-line{
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .fixed-plugin .dropdown.show .dropdown-menu {
       opacity: 1;
 
       -webkit-transform: translateY(-50%);
@@ -463,6 +471,11 @@
     }
     .fixed-plugin .dropdown-menu li {
       width: 50%;
+    }
+
+    .fixed-plugin .dropdown-menu li.colors-line{
+      width: 100%;
+      border-bottom: 1px solid #ddd;
     }
 
     .fixed-plugin li.adjustments-line,
