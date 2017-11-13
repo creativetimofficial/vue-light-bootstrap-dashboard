@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <side-bar>
+      <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/admin/overview">
         <i class="pe-7s-graph"></i>
         <p>Dashboard</p>
@@ -33,7 +34,7 @@
     <div class="main-panel">
       <top-navbar></top-navbar>
 
-      <dashboard-content @click.native="toggleSidebar">
+      <dashboard-content>
 
       </dashboard-content>
 
@@ -48,12 +49,13 @@
   import TopNavbar from './TopNavbar.vue'
   import ContentFooter from './ContentFooter.vue'
   import DashboardContent from './Content.vue'
-
+  import MobileMenu from './MobileMenu.vue'
   export default {
     components: {
       TopNavbar,
       ContentFooter,
-      DashboardContent
+      DashboardContent,
+      MobileMenu
     },
     methods: {
       toggleSidebar () {

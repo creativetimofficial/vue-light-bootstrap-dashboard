@@ -2,19 +2,17 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Dashboard</a>
-      <div class="navbar-toggler navbar-toggler-right">
-        <button type="button"
-                class="navbar-toggle"
-                :class="{toggled: $sidebar.showSidebar}"
-                aria-controls="navigation-index"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                @click="toggleSidebar">
-          <span class="navbar-toggler-bar burger-lines"></span>
-          <span class="navbar-toggler-bar burger-lines"></span>
-          <span class="navbar-toggler-bar burger-lines"></span>
-        </button>
-      </div>
+      <button type="button"
+              class="navbar-toggler navbar-toggler-right"
+              :class="{toggled: $sidebar.showSidebar}"
+              aria-controls="navigation-index"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              @click="toggleSidebar">
+        <span class="navbar-toggler-bar burger-lines"></span>
+        <span class="navbar-toggler-bar burger-lines"></span>
+        <span class="navbar-toggler-bar burger-lines"></span>
+      </button>
       <div class="collapse navbar-collapse justify-content-end">
         <ul class="nav navbar-nav mr-auto">
           <li class="nav-item">
@@ -42,18 +40,18 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a class="nav-link" href="#">
               Account
             </a>
           </li>
-          <drop-down title="">
-            <a href="#">Action</a>
-            <a href="#">Another action</a>
-            <a href="#">Something</a>
-            <a href="#">Another action</a>
-            <a href="#">Something</a>
-            lass="divider">
-            <a href="#">Separated link</a>
+          <drop-down title="Dropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something</a>
+            <div class="divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
           </drop-down>
           <li class="nav-item">
             <a href="#" class="nav-link">

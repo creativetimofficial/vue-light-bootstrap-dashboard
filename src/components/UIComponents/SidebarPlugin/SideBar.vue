@@ -10,7 +10,7 @@
           <span>Vue Light BD</span>
         </a>
       </div>
-
+      <slot name="content"></slot>
       <ul class="nav">
         <!--By default vue-router adds an active class to each route link. This way the links are colored when clicked-->
         <slot>

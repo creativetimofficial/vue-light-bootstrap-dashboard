@@ -2,18 +2,22 @@
   <li class="dropdown nav-item"
       :is="tag"
       :class="{show: isOpen}"
+      aria-haspopup="true"
+      :aria-expanded="isOpen"
       @click="toggleDropDown"
       v-click-outside="closeDropDown">
-    <a class="dropdown-toggle btn-rotate nav-link" data-toggle="dropdown" href="#">
+
+    <a class="nav-link dropdown-toggle"
+       data-toggle="dropdown">
       <slot name="title">
         <i :class="icon"></i>
-        {{title}}
+        <span class="no-icon">{{title}}</span>
         <b class="caret"></b>
       </slot>
     </a>
-    <ul class="dropdown-menu">
+    <div class="dropdown-menu">
       <slot></slot>
-    </ul>
+    </div>
   </li>
 </template>
 <script>
@@ -44,3 +48,8 @@
     }
   }
 </script>
+<style scoped>
+  .dropdown .dropdown-toggle{
+    cursor: pointer;
+  }
+</style>
