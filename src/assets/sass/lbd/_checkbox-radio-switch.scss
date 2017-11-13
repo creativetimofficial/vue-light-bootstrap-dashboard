@@ -5,6 +5,8 @@
 }
 
 .form-check{
+  display: flex;
+  align-items: center;
   .form-check-label{
     display: inline-block;
     position: relative;
