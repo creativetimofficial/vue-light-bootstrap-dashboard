@@ -76,11 +76,11 @@ nav.app-nav{
 }
 
 .ct-documentation {
-  .navbar-nav > li > .dropdown-menu, .dropdown .dropdown-menu{
+  .navbar-nav .nav-item .dropdown-menu, .dropdown .dropdown-menu{
     @include transform-scale(0);
     @include transition($slow-transition-time, $transition-bezier);
   }
-  .navbar-nav > li.open > .dropdown-menu, .dropdown.open .dropdown-menu{
+  .navbar-nav .nav-item.show .dropdown-menu, .dropdown.show .dropdown-menu{
     @include transform-scale(1);
     @include transform-origin($dropdown-coordinates);
 

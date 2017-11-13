@@ -38,16 +38,12 @@ We've already covered `ChartCard` in the previous section [charts](charts?id=cha
 <template>
 <card>
   <h4 slot="header">This is my card title</h4>
-  <div class="row">
-    <div class="col-xs-12">
-     This is my card content
-    </div>
+  <div class="col-xs-12">
+   This is my card content
   </div>
-  <div slot="footer">
-   <div class="stats">
+   <div class="stats col-xs-12" slot="footer">
      Card footer text
    </div>
-  </div>
 </card>
 </template>
 
@@ -63,13 +59,13 @@ We've already covered `ChartCard` in the previous section [charts](charts?id=cha
 </desc>
 <template>
 <stats-card>
-  <div slot="header" class="icon-warning">
-    <i class="fa fa-server text-warning"></i>
+  <div slot="header" class="icon-success">
+    <i class="fa fa-server text-success"></i>
   </div>
   <div slot="content" class="numbers">
     <p>Capacity</p>105GB
   </div>
-  <div slot="footer" class="stats">
+  <div slot="footer">
     <i class="fa fa-refresh"></i>Updated now
   </div>
 </stats-card>
