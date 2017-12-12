@@ -256,7 +256,6 @@
           ]
         },
         tableData: {
-          columns: ['name', 'test'],
           data: [
             {title: 'Sign contract for "What are conference organizers afraid of?"', checked: false},
             {title: 'Lines From Great Russian Literature? Or E-mails From My Boss?', checked: true},
