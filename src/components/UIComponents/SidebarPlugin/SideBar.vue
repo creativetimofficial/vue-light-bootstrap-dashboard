@@ -7,7 +7,7 @@
       <div class="logo">
         <a href="#" class="simple-text">
           <img class="logo-img" src="static/img/vue-logo.png" alt="">
-          <span>Vue Light BD</span>
+          <span>{{title}}</span>
         </a>
       </div>
       <slot name="content"></slot>
@@ -35,6 +35,10 @@
       SidebarLink
     },
     props: {
+      title: {
+        type: String,
+        default: 'Vue LBD'
+      },
       backgroundColor: {
         type: String,
         default: 'blue',
