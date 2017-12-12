@@ -68,7 +68,7 @@
     },
     data () {
       return {
-        sidebarBackground: 'blue',
+        sidebarBackground: 'black',
         sidebarBackgroundImage: 'static/img/sidebar-5.jpg'
       }
     },
