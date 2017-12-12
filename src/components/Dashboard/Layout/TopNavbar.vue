@@ -17,12 +17,12 @@
         <ul class="nav navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="#" data-toggle="dropdown">
-              <i class="fa fa-dashboard"></i>
+              <i class="nc-icon nc-palette"></i>
             </a>
           </li>
-          <drop-down>
+          <drop-down tag="li">
             <template slot="title">
-              <i class="fa fa-globe"></i>
+              <i class="nc-icon nc-planet"></i>
               <b class="caret"></b>
               <span class="notification">5</span>
             </template>
@@ -33,8 +33,9 @@
             <a class="dropdown-item" href="#">Another notification</a>
           </drop-down>
           <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="fa fa-search"></i>
+            <a href="#" class="nav-link">
+              <i class="nc-icon nc-zoom-split"></i>
+              <span class="d-lg-block">&nbsp;Search</span>
             </a>
           </li>
         </ul>
