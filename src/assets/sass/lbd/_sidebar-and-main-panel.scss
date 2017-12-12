@@ -264,7 +264,9 @@ body > .navbar-collapse {
   &.has-image:after {
     opacity: .77;
   }
-
+  &[data-color="black"]:after {
+    @include icon-gradient($black-color-filter-top, $black-color-filter-bottom);
+  }
   &[data-color="blue"]:after {
     @include icon-gradient($new-dark-blue, $blue-color-bottom);
   }
