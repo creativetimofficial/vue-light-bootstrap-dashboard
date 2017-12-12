@@ -184,7 +184,7 @@
       ChartCard,
       StatsCard
     },
-    data() {
+    data () {
       return {
         editTooltip: 'Edit Task',
         deleteTooltip: 'Remove',
@@ -222,7 +222,7 @@
           responsiveOptions: [
             ['screen and (max-width: 640px)', {
               axisX: {
-                labelInterpolationFnc: function (value) {
+                labelInterpolationFnc (value) {
                   return value[0]
                 }
               }
@@ -248,7 +248,7 @@
             ['screen and (max-width: 640px)', {
               seriesBarDistance: 5,
               axisX: {
-                labelInterpolationFnc(value) {
+                labelInterpolationFnc (value) {
                   return value[0]
                 }
               }
