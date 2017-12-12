@@ -41,9 +41,9 @@
       },
       backgroundColor: {
         type: String,
-        default: 'blue',
+        default: 'black',
         validator: (value) => {
-          let acceptedValues = ['', 'blue', 'azure', 'green', 'orange', 'red', 'purple']
+          let acceptedValues = ['', 'blue', 'azure', 'green', 'orange', 'red', 'purple', 'black']
           return acceptedValues.indexOf(value) !== -1
         }
       },
