@@ -8,7 +8,8 @@
               <i class="nc-icon nc-chart text-warning"></i>
             </div>
             <div slot="content">
-              <p>Capacity</p>105GB
+              <p class="card-category">Capacity</p>
+              <h4 class="card-title">105GB</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-refresh"></i>Updated now
@@ -22,7 +23,8 @@
               <i class="nc-icon nc-light-3 text-success"></i>
             </div>
             <div slot="content">
-              <p>Revenue</p>$1,345
+              <p class="card-category">Revenue</p>
+              <h4 class="card-title">$1,345</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-calendar-o"></i>Last day
@@ -36,7 +38,8 @@
               <i class="nc-icon nc-vector text-danger"></i>
             </div>
             <div slot="content">
-              <p>Errors</p>23
+              <p class="card-category">Errors</p>
+              <h4 class="card-title">23</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-clock-o"></i>Last day
@@ -50,7 +53,8 @@
               <i class="nc-icon nc-favourite-28 text-primary"></i>
             </div>
             <div slot="content">
-              <p>Followers</p>+45
+              <p class="card-category">Followers</p>
+              <h4 class="card-title">+45</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-refresh"></i>Updated now
@@ -180,7 +184,7 @@
       ChartCard,
       StatsCard
     },
-    data () {
+    data() {
       return {
         editTooltip: 'Edit Task',
         deleteTooltip: 'Remove',
@@ -244,7 +248,7 @@
             ['screen and (max-width: 640px)', {
               seriesBarDistance: 5,
               axisX: {
-                labelInterpolationFnc (value) {
+                labelInterpolationFnc(value) {
                   return value[0]
                 }
               }
