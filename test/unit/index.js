@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import 'es6-promise/auto'
-import fnBind from 'function-bind'
-Function.prototype.bind = fnBind
 Vue.config.productionTip = false
 
 // require all test files (files that ends with .spec.js)
