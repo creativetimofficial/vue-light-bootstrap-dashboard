@@ -95,7 +95,7 @@
                 <i class="fa fa-circle text-warning"></i> Unsubscribe
               </div>
               <hr>
-              <div>
+              <div class="stats">
                 <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
               </div>
             </template>
@@ -120,7 +120,7 @@
                 <i class="fa fa-circle text-danger"></i> BMW 5 Series
               </div>
               <hr>
-              <div>
+              <div class="stats">
                 <i class="fa fa-check"></i> Data information certified
               </div>
             </template>

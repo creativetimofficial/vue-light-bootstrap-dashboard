@@ -12,8 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="card-footer stats" v-if="$slots.footer">
-      <hr/>
+    <div slot="footer" class="stats" v-if="$slots.footer">
       <slot name="footer"></slot>
     </div>
   </card>
