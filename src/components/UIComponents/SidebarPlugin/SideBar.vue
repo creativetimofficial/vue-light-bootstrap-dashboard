@@ -6,7 +6,7 @@
     <div class="sidebar-wrapper">
       <div class="logo">
         <a href="#" class="simple-text">
-          <img class="logo-img" src="static/img/vue-logo.png" alt="">
+          <!--<img class="logo-img" src="static/img/vue-logo.png" alt="">-->
           <span>{{title}}</span>
         </a>
       </div>

@@ -11,7 +11,6 @@ License - nucleoapp.com/license/
   font-weight: normal;
   font-style: normal;
 }
-
 /*------------------------
 	base class definition
 -------------------------*/
@@ -25,7 +24,6 @@ License - nucleoapp.com/license/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 /*------------------------
   change icon size
 -------------------------*/
@@ -33,15 +31,12 @@ License - nucleoapp.com/license/
   font-size: 1.33333333em;
   vertical-align: -16%;
 }
-
 .nc-icon.x2 {
   font-size: 2em;
 }
-
 .nc-icon.x3 {
   font-size: 3em;
 }
-
 /*----------------------------------
   add a square/circle background
 -----------------------------------*/
@@ -51,11 +46,9 @@ License - nucleoapp.com/license/
   vertical-align: -16%;
   background-color: #eee;
 }
-
 .nc-icon.circle {
   border-radius: 50%;
 }
-
 /*------------------------
   list icons
 -------------------------*/
@@ -64,33 +57,32 @@ License - nucleoapp.com/license/
   margin-left: 2.14285714em;
   list-style-type: none;
 }
-
 .nc-icon-ul > li {
   position: relative;
 }
-
 .nc-icon-ul > li > .nc-icon {
   position: absolute;
   left: -1.57142857em;
   top: 0.14285714em;
   text-align: center;
 }
-
 .nc-icon-ul > li > .nc-icon.lg {
   top: 0;
   left: -1.35714286em;
 }
-
 .nc-icon-ul > li > .nc-icon.circle,
 .nc-icon-ul > li > .nc-icon.square {
   top: -0.19047619em;
   left: -1.9047619em;
 }
 
-.all-icons .font-icon-list .font-icon-detail i {
-  font-size: 32px;
+.all-icons{
+    .font-icon-list{
+        .font-icon-detail i{
+            font-size: 32px;
+        }
+    }
 }
-
 /*------------------------
   spinning icons
 -------------------------*/
@@ -99,7 +91,6 @@ License - nucleoapp.com/license/
   -moz-animation: nc-icon-spin 2s infinite linear;
   animation: nc-icon-spin 2s infinite linear;
 }
-
 @-webkit-keyframes nc-icon-spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -108,7 +99,6 @@ License - nucleoapp.com/license/
     -webkit-transform: rotate(360deg);
   }
 }
-
 @-moz-keyframes nc-icon-spin {
   0% {
     -moz-transform: rotate(0deg);
@@ -117,7 +107,6 @@ License - nucleoapp.com/license/
     -moz-transform: rotate(360deg);
   }
 }
-
 @keyframes nc-icon-spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -134,7 +123,6 @@ License - nucleoapp.com/license/
     transform: rotate(360deg);
   }
 }
-
 /*------------------------
   rotated/flipped icons
 -------------------------*/
@@ -146,7 +134,6 @@ License - nucleoapp.com/license/
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-
 .nc-icon.rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
@@ -155,7 +142,6 @@ License - nucleoapp.com/license/
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
 .nc-icon.rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
@@ -164,7 +150,6 @@ License - nucleoapp.com/license/
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-
 .nc-icon.flip-y {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
@@ -173,7 +158,6 @@ License - nucleoapp.com/license/
   -o-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
-
 .nc-icon.flip-x {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
@@ -182,409 +166,409 @@ License - nucleoapp.com/license/
   -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
-
 /*------------------------
 	font icons
 -------------------------*/
 
 .nc-air-baloon::before {
-  content: "\ea01";
+    content: "\ea01";
 }
 
 .nc-album-2::before {
-  content: "\ea02";
+    content: "\ea02";
 }
 
 .nc-alien-33::before {
-  content: "\ea03";
+    content: "\ea03";
 }
 
 .nc-align-center::before {
-  content: "\ea04";
+    content: "\ea04";
 }
 
 .nc-align-left-2::before {
-  content: "\ea05";
+    content: "\ea05";
 }
 
 .nc-ambulance::before {
-  content: "\ea06";
+    content: "\ea06";
 }
 
 .nc-android::before {
-  content: "\ea07";
+    content: "\ea07";
 }
 
 .nc-app::before {
-  content: "\ea08";
+    content: "\ea08";
 }
 
 .nc-apple::before {
-  content: "\ea09";
+    content: "\ea09";
 }
 
 .nc-atom::before {
-  content: "\ea0a";
+    content: "\ea0a";
 }
 
 .nc-attach-87::before {
-  content: "\ea0b";
+    content: "\ea0b";
 }
 
 .nc-audio-92::before {
-  content: "\ea0c";
+    content: "\ea0c";
 }
 
 .nc-backpack::before {
-  content: "\ea0d";
+    content: "\ea0d";
 }
 
 .nc-badge::before {
-  content: "\ea0e";
+    content: "\ea0e";
 }
 
 .nc-bag::before {
-  content: "\ea0f";
+    content: "\ea0f";
 }
 
 .nc-bank::before {
-  content: "\ea10";
+    content: "\ea10";
 }
 
 .nc-battery-81::before {
-  content: "\ea11";
+    content: "\ea11";
 }
 
 .nc-bell-55::before {
-  content: "\ea12";
+    content: "\ea12";
 }
 
 .nc-bold::before {
-  content: "\ea13";
+    content: "\ea13";
 }
 
 .nc-bulb-63::before {
-  content: "\ea14";
+    content: "\ea14";
 }
 
 .nc-bullet-list-67::before {
-  content: "\ea15";
+    content: "\ea15";
 }
 
 .nc-bus-front-12::before {
-  content: "\ea16";
+    content: "\ea16";
 }
 
 .nc-button-pause::before {
-  content: "\ea17";
+    content: "\ea17";
 }
 
 .nc-button-play::before {
-  content: "\ea18";
+    content: "\ea18";
 }
 
 .nc-button-power::before {
-  content: "\ea19";
+    content: "\ea19";
 }
 
 .nc-camera-20::before {
-  content: "\ea1a";
+    content: "\ea1a";
 }
 
 .nc-caps-small::before {
-  content: "\ea1b";
+    content: "\ea1b";
 }
 
 .nc-cart-simple::before {
-  content: "\ea1c";
+    content: "\ea1c";
 }
 
 .nc-cctv::before {
-  content: "\ea1d";
+    content: "\ea1d";
 }
 
 .nc-chart-bar-32::before {
-  content: "\ea1e";
+    content: "\ea1e";
 }
 
 .nc-chart-pie-35::before {
-  content: "\ea1f";
+    content: "\ea1f";
 }
 
 .nc-chart-pie-36::before {
-  content: "\ea20";
+    content: "\ea20";
 }
 
 .nc-chart::before {
-  content: "\ea21";
+    content: "\ea21";
 }
 
 .nc-chat-round::before {
-  content: "\ea22";
+    content: "\ea22";
 }
 
 .nc-check-2::before {
-  content: "\ea23";
+    content: "\ea23";
 }
 
 .nc-circle-09::before {
-  content: "\ea24";
+    content: "\ea24";
 }
 
 .nc-circle::before {
-  content: "\ea25";
+    content: "\ea25";
 }
 
 .nc-cloud-download-93::before {
-  content: "\ea26";
+    content: "\ea26";
 }
 
 .nc-cloud-upload-94::before {
-  content: "\ea27";
+    content: "\ea27";
 }
 
 .nc-compass-05::before {
-  content: "\ea28";
+    content: "\ea28";
 }
 
 .nc-controller-modern::before {
-  content: "\ea29";
+    content: "\ea29";
 }
 
 .nc-credit-card::before {
-  content: "\ea2a";
+    content: "\ea2a";
 }
 
 .nc-delivery-fast::before {
-  content: "\ea2b";
+    content: "\ea2b";
 }
 
 .nc-email-83::before {
-  content: "\ea2c";
+    content: "\ea2c";
 }
 
 .nc-email-85::before {
-  content: "\ea2d";
+    content: "\ea2d";
 }
 
 .nc-explore-2::before {
-  content: "\ea2e";
+    content: "\ea2e";
 }
 
 .nc-fav-remove::before {
-  content: "\ea2f";
+    content: "\ea2f";
 }
 
 .nc-favourite-28::before {
-  content: "\ea30";
+    content: "\ea30";
 }
 
 .nc-globe-2::before {
-  content: "\ea31";
+    content: "\ea31";
 }
 
 .nc-grid-45::before {
-  content: "\ea32";
+    content: "\ea32";
 }
 
 .nc-headphones-2::before {
-  content: "\ea33";
+    content: "\ea33";
 }
 
 .nc-html5::before {
-  content: "\ea34";
+    content: "\ea34";
 }
 
 .nc-istanbul::before {
-  content: "\ea35";
+    content: "\ea35";
 }
 
 .nc-key-25::before {
-  content: "\ea36";
+    content: "\ea36";
 }
 
 .nc-layers-3::before {
-  content: "\ea37";
+    content: "\ea37";
 }
 
 .nc-light-3::before {
-  content: "\ea38";
+    content: "\ea38";
 }
 
 .nc-lock-circle-open::before {
-  content: "\ea39";
+    content: "\ea39";
 }
 
 .nc-map-big::before {
-  content: "\ea3a";
+    content: "\ea3a";
 }
 
 .nc-mobile::before {
-  content: "\ea3c";
+    content: "\ea3c";
 }
 
 .nc-money-coins::before {
-  content: "\ea3b";
+    content: "\ea3b";
 }
 
 .nc-note-03::before {
-  content: "\ea3d";
+    content: "\ea3d";
 }
 
 .nc-notes::before {
-  content: "\ea3e";
+    content: "\ea3e";
 }
 
 .nc-notification-70::before {
-  content: "\ea3f";
+    content: "\ea3f";
 }
 
 .nc-palette::before {
-  content: "\ea40";
+    content: "\ea40";
 }
 
 .nc-paper-2::before {
-  content: "\ea41";
+    content: "\ea41";
 }
 
 .nc-pin-3::before {
-  content: "\ea42";
+    content: "\ea42";
 }
 
 .nc-planet::before {
-  content: "\ea43";
+    content: "\ea43";
 }
 
 .nc-preferences-circle-rotate::before {
-  content: "\ea44";
+    content: "\ea44";
 }
 
 .nc-puzzle-10::before {
-  content: "\ea45";
+    content: "\ea45";
 }
 
 .nc-quote::before {
-  content: "\ea46";
+    content: "\ea46";
 }
 
 .nc-refresh-02::before {
-  content: "\ea47";
+    content: "\ea47";
 }
 
 .nc-ruler-pencil::before {
-  content: "\ea48";
+    content: "\ea48";
 }
 
 .nc-satisfied::before {
-  content: "\ea49";
+    content: "\ea49";
 }
 
 .nc-scissors::before {
-  content: "\ea4a";
+    content: "\ea4a";
 }
 
 .nc-send::before {
-  content: "\ea4b";
+    content: "\ea4b";
 }
 
 .nc-settings-90::before {
-  content: "\ea4c";
+    content: "\ea4c";
 }
 
 .nc-settings-gear-64::before {
-  content: "\ea4d";
+    content: "\ea4d";
 }
 
 .nc-settings-tool-66::before {
-  content: "\ea4e";
+    content: "\ea4e";
 }
 
 .nc-simple-add::before {
-  content: "\ea4f";
+    content: "\ea4f";
 }
 
 .nc-simple-delete::before {
-  content: "\ea50";
+    content: "\ea50";
 }
 
 .nc-simple-remove::before {
-  content: "\ea51";
+    content: "\ea51";
 }
 
 .nc-single-02::before {
-  content: "\ea52";
+    content: "\ea52";
 }
 
 .nc-single-copy-04::before {
-  content: "\ea53";
+    content: "\ea53";
 }
 
 .nc-spaceship::before {
-  content: "\ea54";
+    content: "\ea54";
 }
 
 .nc-square-pin::before {
-  content: "\ea55";
+    content: "\ea55";
 }
 
 .nc-stre-down::before {
-  content: "\ea56";
+    content: "\ea56";
 }
 
 .nc-stre-left::before {
-  content: "\ea57";
+    content: "\ea57";
 }
 
 .nc-stre-right::before {
-  content: "\ea58";
+    content: "\ea58";
 }
 
 .nc-stre-up::before {
-  content: "\ea59";
+    content: "\ea59";
 }
 
 .nc-sun-fog-29::before {
-  content: "\ea5a";
+    content: "\ea5a";
 }
 
 .nc-support-17::before {
-  content: "\ea5b";
+    content: "\ea5b";
 }
 
 .nc-tablet-2::before {
-  content: "\ea5c";
+    content: "\ea5c";
 }
 
 .nc-tag-content::before {
-  content: "\ea5d";
+    content: "\ea5d";
 }
 
 .nc-tap-01::before {
-  content: "\ea5e";
+    content: "\ea5e";
 }
 
 .nc-time-alarm::before {
-  content: "\ea5f";
+    content: "\ea5f";
 }
 
 .nc-tv-2::before {
-  content: "\ea60";
+    content: "\ea60";
 }
 
 .nc-umbrella-13::before {
-  content: "\ea61";
+    content: "\ea61";
 }
 
 .nc-vector::before {
-  content: "\ea62";
+    content: "\ea62";
 }
 
 .nc-watch-time::before {
-  content: "\ea63";
+    content: "\ea63";
 }
 
 .nc-zoom-split::before {
-  content: "\ea64";
+    content: "\ea64";
 }
+
 
 /* all icon font classes list here */
