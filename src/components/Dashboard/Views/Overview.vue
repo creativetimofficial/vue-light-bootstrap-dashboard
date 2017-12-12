@@ -5,7 +5,7 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-warning">
-              <i class="pe-7s-server text-warning"></i>
+              <i class="nc-icon nc-chart text-warning"></i>
             </div>
             <div slot="content">
               <p>Capacity</p>105GB
@@ -19,7 +19,7 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-success">
-              <i class="pe-7s-wallet text-success"></i>
+              <i class="nc-icon nc-light-3 text-success"></i>
             </div>
             <div slot="content">
               <p>Revenue</p>$1,345
@@ -33,7 +33,7 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-danger">
-              <i class="pe-7s-graph1 text-danger"></i>
+              <i class="nc-icon nc-vector text-danger"></i>
             </div>
             <div slot="content">
               <p>Errors</p>23
@@ -47,7 +47,7 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-info">
-              <i class="fa fa-twitter text-info"></i>
+              <i class="nc-icon nc-favourite-28 text-primary"></i>
             </div>
             <div slot="content">
               <p>Followers</p>+45
