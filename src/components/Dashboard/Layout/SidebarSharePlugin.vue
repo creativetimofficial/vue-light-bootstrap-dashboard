@@ -457,17 +457,15 @@
       left: 0px;
       position: absolute;
     }
-
-    .fixed-plugin {
-      top: 300px;
-    }
-
   }
 
   @media (max-width: 991px) {
     .fixed-plugin .dropdown-menu {
       right: 60px;
       width: 220px;
+    }
+    .fixed-plugin .dropdown.show .dropdown-menu {
+      left: -240px !important;
     }
     .fixed-plugin .dropdown-menu li {
       width: 50%;

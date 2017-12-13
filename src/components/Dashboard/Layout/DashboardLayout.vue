@@ -33,12 +33,13 @@
         <p>Notifications</p>
       </sidebar-link>
     </side-bar>
-    <sidebar-share :color.sync="sidebarBackground"
-                   :image.sync="sidebarBackgroundImage">
 
-    </sidebar-share>
     <div class="main-panel">
       <top-navbar></top-navbar>
+      <sidebar-share :color.sync="sidebarBackground"
+                     :image.sync="sidebarBackgroundImage">
+
+      </sidebar-share>
 
       <dashboard-content @click.native="toggleSidebar">
 
