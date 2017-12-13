@@ -5,10 +5,11 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-warning">
-              <i class="pe-7s-server text-warning"></i>
+              <i class="nc-icon nc-chart text-warning"></i>
             </div>
             <div slot="content">
-              <p>Capacity</p>105GB
+              <p class="card-category">Capacity</p>
+              <h4 class="card-title">105GB</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-refresh"></i>Updated now
@@ -19,10 +20,11 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-success">
-              <i class="pe-7s-wallet text-success"></i>
+              <i class="nc-icon nc-light-3 text-success"></i>
             </div>
             <div slot="content">
-              <p>Revenue</p>$1,345
+              <p class="card-category">Revenue</p>
+              <h4 class="card-title">$1,345</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-calendar-o"></i>Last day
@@ -33,10 +35,11 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-danger">
-              <i class="pe-7s-graph1 text-danger"></i>
+              <i class="nc-icon nc-vector text-danger"></i>
             </div>
             <div slot="content">
-              <p>Errors</p>23
+              <p class="card-category">Errors</p>
+              <h4 class="card-title">23</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-clock-o"></i>Last day
@@ -47,10 +50,11 @@
         <div class="col-xl-3 col-md-6">
           <stats-card>
             <div slot="header" class="icon-info">
-              <i class="fa fa-twitter text-info"></i>
+              <i class="nc-icon nc-favourite-28 text-primary"></i>
             </div>
             <div slot="content">
-              <p>Followers</p>+45
+              <p class="card-category">Followers</p>
+              <h4 class="card-title">+45</h4>
             </div>
             <div slot="footer">
               <i class="fa fa-refresh"></i>Updated now
@@ -95,7 +99,7 @@
                 <i class="fa fa-circle text-warning"></i> Unsubscribe
               </div>
               <hr>
-              <div>
+              <div class="stats">
                 <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
               </div>
             </template>
@@ -120,7 +124,7 @@
                 <i class="fa fa-circle text-danger"></i> BMW 5 Series
               </div>
               <hr>
-              <div>
+              <div class="stats">
                 <i class="fa fa-check"></i> Data information certified
               </div>
             </template>
@@ -218,7 +222,7 @@
           responsiveOptions: [
             ['screen and (max-width: 640px)', {
               axisX: {
-                labelInterpolationFnc: function (value) {
+                labelInterpolationFnc (value) {
                   return value[0]
                 }
               }
@@ -252,7 +256,6 @@
           ]
         },
         tableData: {
-          columns: ['name', 'test'],
           data: [
             {title: 'Sign contract for "What are conference organizers afraid of?"', checked: false},
             {title: 'Lines From Great Russian Literature? Or E-mails From My Boss?', checked: true},

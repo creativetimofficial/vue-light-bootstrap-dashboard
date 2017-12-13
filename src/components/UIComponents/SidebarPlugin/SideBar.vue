@@ -6,8 +6,8 @@
     <div class="sidebar-wrapper">
       <div class="logo">
         <a href="#" class="simple-text">
-          <img class="logo-img" src="static/img/vue-logo.png" alt="">
-          <span>Vue Light BD</span>
+          <!--<img class="logo-img" src="static/img/vue-logo.png" alt="">-->
+          <span>{{title}}</span>
         </a>
       </div>
       <slot name="content"></slot>
@@ -35,11 +35,15 @@
       SidebarLink
     },
     props: {
+      title: {
+        type: String,
+        default: 'Vue LBD'
+      },
       backgroundColor: {
         type: String,
         default: 'black',
         validator: (value) => {
-          let acceptedValues = ['', 'black', 'blue', 'azure', 'green', 'orange', 'red', 'purple']
+          let acceptedValues = ['', 'blue', 'azure', 'green', 'orange', 'red', 'purple', 'black']
           return acceptedValues.indexOf(value) !== -1
         }
       },
