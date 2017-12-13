@@ -137,7 +137,7 @@
 
   .fixed-plugin {
     position: absolute;
-    top: 300px;
+    top: 150px;
     right: 0;
     width: 64px;
     background: rgba(0, 0, 0, .3);
