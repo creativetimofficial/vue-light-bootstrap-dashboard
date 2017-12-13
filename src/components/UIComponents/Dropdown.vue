@@ -15,7 +15,7 @@
         <b class="caret"></b>
       </slot>
     </a>
-    <div class="dropdown-menu">
+    <div class="dropdown-menu" v-show="isOpen">
       <slot></slot>
     </div>
   </li>

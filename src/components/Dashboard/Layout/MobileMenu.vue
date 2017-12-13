@@ -14,7 +14,6 @@
     </drop-down>
     <li class="nav-item">
       <a href="#" class="nav-link">
-        <i class="fa fa-search hidden-sm-down"></i>
         <i class="nc-icon nc-zoom-split hidden-lg-up"></i>
         <span class="d-lg-none">Search</span>
       </a>
