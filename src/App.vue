@@ -15,7 +15,7 @@
       this.$notifications.notify(
         {
           component: notification,
-          icon: 'pe-7s-gift',
+          icon: 'nc-icon nc-app',
           type: 'info',
           horizontalAlign: 'center'
         })

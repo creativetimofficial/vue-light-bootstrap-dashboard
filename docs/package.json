@@ -13,6 +13,7 @@
     "marked": "^0.3.6"
   },
   "devDependencies": {
+    "cpy-cli": "^1.0.1",
     "poi": "^9.4.3",
     "prismjs": "^1.8.3"
   }
