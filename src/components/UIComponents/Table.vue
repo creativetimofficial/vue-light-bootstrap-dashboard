@@ -1,9 +1,11 @@
 <template>
   <table class="table">
     <thead>
-      <slot name="columns">
-        <th v-for="column in columns">{{column}}</th>
-      </slot>
+      <tr>
+        <slot name="columns">
+          <th v-for="column in columns">{{column}}</th>
+        </slot>
+      </tr>
     </thead>
     <tbody>
     <tr v-for="item in data">
