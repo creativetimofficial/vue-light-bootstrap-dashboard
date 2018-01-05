@@ -33,6 +33,21 @@
           </card>
         </div>
 
+        <div class="col-12">
+          <card>
+            <template slot="header">
+              <h4 class="card-title">Smaller Table</h4>
+              <p class="card-category">Here is a subtitle for this table</p>
+            </template>
+            <div class="table-responsive">
+              <l-table class="table-hover table-striped table-sm"
+                       :columns="table3.columns"
+                       :data="table3.data">
+              </l-table>
+            </div>
+          </card>
+
+        </div>
       </div>
     </div>
   </div>
@@ -88,6 +103,10 @@
           data: [...tableData]
         },
         table2: {
+          columns: [...tableColumns],
+          data: [...tableData]
+        },
+        table3: {
           columns: [...tableColumns],
           data: [...tableData]
         }
