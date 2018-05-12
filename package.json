@@ -25,6 +25,7 @@
     "vue2-google-maps": "^0.8.4"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.16",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -83,7 +84,6 @@
     "vue-loader": "^13.0.4",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
-    "vue-test-utils": "^1.0.0-beta.3",
     "webpack": "^2.6.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
