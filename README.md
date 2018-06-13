@@ -18,7 +18,7 @@ Vue Light Bootstrap Dashboard is built on top of Bootstrap 4, Vuejs and Vue-rout
 
 The repo uses [vue-cli](https://github.com/vuejs/vue-cli) scaffolding which takes care of the development setup with webpack and all the necessary modern tools to make web development faster and easier.
 
-## [Documentation](https://cristijora.github.io/vue-light-bootstrap-dashboard/documentation/#/buttons)
+## [Documentation](https://demos.creative-tim.com/vue-light-bootstrap-dashboard/documentation/#/buttons)
 
 ## :cloud: Build Setup
 
