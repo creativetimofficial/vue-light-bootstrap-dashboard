@@ -15,12 +15,9 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "chartist": "^0.11.0",
-    "es6-promise": "^4.1.1",
     "google-maps": "^3.2.1",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.6",
-    "vue-clickaway": "^2.1.0",
-    "vue-notifyjs": "^0.4.3",
     "vue-router": "^3.0.2",
     "vue2-google-maps": "^0.8.4"
   },
