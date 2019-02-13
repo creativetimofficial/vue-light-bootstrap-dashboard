@@ -65,6 +65,29 @@
     box-shadow: none !important;
   }
 }
+
+.table.table-sm {
+
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td{
+    padding: 6px 6px;
+  }
+
+  > thead > tr > th,
+  > thead > th {
+    font-size: $font-size-small;
+    padding-bottom: 3px;
+  }
+
+  > tbody > tr > td {
+    font-size: $font-size-small;
+  }
+}
+
 .table-upgrade{
   .table{
     tr{
