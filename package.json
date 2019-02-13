@@ -1,9 +1,9 @@
 {
   "name": "vue-light-bootstrap-dashboard",
   "version": "2.0.0",
+  "private": true,
   "description": "Vue light bootstrap dashboard",
   "author": "cristijora <joracristi@gmail.com>",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -16,6 +16,7 @@
     "bootstrap": "^4.3.1",
     "chartist": "^0.11.0",
     "google-maps": "^3.2.1",
+    "register-service-worker": "^1.5.2",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
