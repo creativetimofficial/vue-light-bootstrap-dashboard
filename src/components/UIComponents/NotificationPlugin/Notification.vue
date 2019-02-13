@@ -1,8 +1,8 @@
 <template>
   <div @click="tryClose"
        data-notify="container"
-       class="alert open"
-       :class="[{'alert-with-icon': icon}, verticalAlign, horizontalAlign, alertType]"
+       class="alert"
+       :class="[{'alert-with-icon': icon || showClose}, verticalAlign, horizontalAlign, alertType]"
        role="alert"
        :style="customPosition"
        data-notify-position="top-center">
@@ -13,15 +13,15 @@
       class="close col-xs-1"
       data-notify="dismiss"
       @click="close">
-      <i class="tim-icons icon-simple-remove"></i>
+      <i class="nc-icons nc-simple-remove"></i>
     </button>
 
     <span v-if="icon" data-notify="icon" :class="['alert-icon', icon]"></span>
-    <div data-notify="message">
+    <span data-notify="message">
       <div v-if="title" class="title"><b>{{title}}<br/></b></div>
       <div v-if="message" v-html="message"></div>
       <content-render v-if="!message && component" :component="component"></content-render>
-    </div>
+    </span>
   </div>
 </template>
 <script>
