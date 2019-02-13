@@ -52,13 +52,30 @@ body > .navbar-collapse{
         .simple-text{
             text-transform: uppercase;
             padding: $padding-small-vertical $padding-zero;
-            display: block;
             font-size: $font-size-large;
             color: $white-color;
             text-align: center;
             font-weight: $font-weight-normal;
             line-height: 30px;
-        }
+            display: flex;
+            align-items: center;
+
+            .logo-img{
+              width: 40px;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              margin-left: 0px;
+              margin-right: 10px;
+              background: white;
+              border-radius: 40px;
+
+              img{
+                max-width: 21px;
+              }
+            }
+          }
     }
 
     .logo-tim{
@@ -184,7 +201,8 @@ body > .navbar-collapse{
         .simple-text{
             text-transform: uppercase;
             padding: $padding-small-vertical $padding-zero;
-            display: block;
+            display: flex;
+            align-items: center;
             font-size: $font-size-large;
             color: $white-color;
             text-align: center;
@@ -237,7 +255,7 @@ body > .navbar-collapse{
     }
 
     &[data-color="black"]:after{
-        @include icon-gradient($default-states-color, $default-states-color);
+      @include icon-gradient($black-color-top, $black-color-bottom);
     }
     &[data-color="blue"]:after{
         @include icon-gradient($new-dark-blue, $blue-color-bottom);
