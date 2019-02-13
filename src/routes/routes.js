@@ -10,6 +10,7 @@ import Typography from 'src/components/Dashboard/Views/Typography.vue'
 import Icons from 'src/components/Dashboard/Views/Icons.vue'
 import Maps from 'src/components/Dashboard/Views/Maps.vue'
 import Notifications from 'src/components/Dashboard/Views/Notifications.vue'
+import Upgrade from 'src/components/Dashboard/Views/Upgrade.vue'
 
 const routes = [
   {
@@ -56,6 +57,11 @@ const routes = [
         path: 'notifications',
         name: 'Notifications',
         component: Notifications
+      },
+      {
+        path: 'upgrade',
+        name: 'Upgrade to PRO',
+        component: Upgrade
       }
     ]
   },

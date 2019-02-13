@@ -33,8 +33,7 @@
 
       <template slot="bottom-links">
         <sidebar-link class="active"
-                      tag="li"
-                      href="https://www.creative-tim.com/product/vue-light-bootstrap-dashboard-pro">
+                      to="/admin/upgrade">
           <i class="nc-icon nc-alien-33"></i>
           <p>Upgrade to PRO</p>
         </sidebar-link>
