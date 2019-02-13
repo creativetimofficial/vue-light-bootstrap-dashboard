@@ -7,7 +7,7 @@
       <div class="logo">
         <a href="#" class="simple-text">
             <div class="logo-img">
-                <img src="static/img/vue-logo.png" alt="">
+                <img src="img/vue-logo.png" alt="">
             </div>
           {{title}}
         </a>
@@ -52,7 +52,7 @@
       },
       backgroundImage: {
         type: String,
-        default: 'static/img/sidebar-5.jpg'
+        default: 'img/sidebar-5.jpg'
       },
       activeColor: {
         type: String,
