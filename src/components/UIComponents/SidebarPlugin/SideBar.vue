@@ -5,7 +5,7 @@
        :data-image="backgroundImage">
     <div class="sidebar-wrapper">
       <div class="logo">
-        <a href="#" class="simple-text">
+        <a href="#" class="simple-text logo__container">
             <div class="logo-img">
                 <img src="img/vue-logo.png" alt="">
             </div>
@@ -14,7 +14,7 @@
       </div>
 
       <slot name="content"></slot>
-      <ul class="nav">
+      <ul class="nav nav-main__links">
         <!--By default vue-router adds an active class to each route link. This way the links are colored when clicked-->
         <slot>
           <sidebar-link v-for="(link,index) in sidebarLinks"
@@ -26,6 +26,9 @@
             <p>{{link.name}}</p>
           </sidebar-link>
         </slot>
+      </ul>
+      <ul class="nav nav-bottom" v-if="$slots['bottom-links']">
+        <slot name="bottom-links"></slot>
       </ul>
     </div>
   </div>
@@ -87,5 +90,14 @@
 
 </script>
 <style>
-
+  .sidebar .sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+ .sidebar .nav-main__links {
+   flex: 1;
+ }
+ .sidebar .sidebar-wrapper .logo .logo__container {
+   padding-left: 10px;
+ }
 </style>

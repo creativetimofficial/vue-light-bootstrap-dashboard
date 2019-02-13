@@ -10,10 +10,10 @@
       v-if="showClose"
       type="button"
       aria-hidden="true"
-      class="close col-xs-1"
+      class="close"
       data-notify="dismiss"
       @click="close">
-      <i class="nc-icons nc-simple-remove"></i>
+      <i class="nc-icon nc-simple-remove"></i>
     </button>
 
     <span v-if="icon" data-notify="icon" :class="['alert-icon', icon]"></span>

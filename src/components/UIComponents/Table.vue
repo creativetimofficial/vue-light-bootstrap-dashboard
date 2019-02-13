@@ -2,13 +2,15 @@
   <table class="table">
     <thead>
       <slot name="columns">
-        <th v-for="column in columns">{{column}}</th>
+        <tr>
+          <th v-for="column in columns" :key="column">{{column}}</th>
+        </tr>
       </slot>
     </thead>
     <tbody>
-    <tr v-for="item in data">
+    <tr v-for="(item, index) in data" :key="index">
       <slot :row="item">
-        <td v-for="column in columns" v-if="hasValue(item, column)">{{itemValue(item, column)}}</td>
+        <td v-for="column in columns" :key="column" v-if="hasValue(item, column)">{{itemValue(item, column)}}</td>
       </slot>
     </tr>
     </tbody>

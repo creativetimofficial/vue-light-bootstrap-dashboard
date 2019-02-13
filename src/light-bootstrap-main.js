@@ -10,7 +10,6 @@ import SideBar from './components/UIComponents/SidebarPlugin'
 
 // asset imports
 import 'bootstrap/dist/css/bootstrap.css'
-import 'vue-notifyjs/themes/default.scss'
 import './assets/sass/light-bootstrap-dashboard.scss'
 import './assets/css/demo.css'
 
