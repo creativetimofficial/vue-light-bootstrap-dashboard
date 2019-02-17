@@ -8,13 +8,9 @@
 <script>
   export default {
     mounted () {
-      const notification = {
-        template: `<span>Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer.</span>`
-      }
-
-      this.$notifications.notify(
+      this.$notify(
         {
-          component: notification,
+          message: `<span>Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer.</span>`,
           icon: 'nc-icon nc-app',
           type: 'info',
           horizontalAlign: 'center'

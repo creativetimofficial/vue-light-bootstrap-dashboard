@@ -148,6 +148,7 @@
         tbody td:last-child,
         thead th:last-child{
             padding-right: 15px;
+            display: inline-flex;
         }
     }
 
@@ -186,6 +187,7 @@
         min-height: 64px;
 
         i{
+            font-weight: 400;
             line-height: 59px;
         }
     }
