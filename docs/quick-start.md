@@ -30,11 +30,9 @@ it's easier to use them across the app without importing them each time.
 
 Here's the list of global components:
 
-- **BaseButton**
-- **BaseCheckbox**
-- **BaseDropdown**
+- **FgInput**
+- **DropDown**
 - **Card**
-- **BaseInput**
 
 #### Local components
 
@@ -43,9 +41,8 @@ and bigger. In order to not affect the overall bundle size of the Argon Kit, the
 
 Here's the list of local components:
 
-- **BarChart**
-- **BaseAlert**
-- **BaseNav**
+- **Table**
+- **Checkbox**
 - **BaseTable**
 - **CloseButton**
 - **LineChart**
