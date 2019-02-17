@@ -4,77 +4,77 @@
     <form>
       <div class="row">
         <div class="col-md-5">
-          <fg-input type="text"
+          <base-input type="text"
                     label="Company"
                     :disabled="true"
                     placeholder="Light dashboard"
                     v-model="user.company">
-          </fg-input>
+          </base-input>
         </div>
         <div class="col-md-3">
-          <fg-input type="text"
+          <base-input type="text"
                     label="Username"
                     placeholder="Username"
                     v-model="user.username">
-          </fg-input>
+          </base-input>
         </div>
         <div class="col-md-4">
-          <fg-input type="email"
+          <base-input type="email"
                     label="Email"
                     placeholder="Email"
                     v-model="user.email">
-          </fg-input>
+          </base-input>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <fg-input type="text"
+          <base-input type="text"
                     label="First Name"
                     placeholder="First Name"
                     v-model="user.firstName">
-          </fg-input>
+          </base-input>
         </div>
         <div class="col-md-6">
-          <fg-input type="text"
+          <base-input type="text"
                     label="Last Name"
                     placeholder="Last Name"
                     v-model="user.lastName">
-          </fg-input>
+          </base-input>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12">
-          <fg-input type="text"
+          <base-input type="text"
                     label="Address"
                     placeholder="Home Address"
                     v-model="user.address">
-          </fg-input>
+          </base-input>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-4">
-          <fg-input type="text"
+          <base-input type="text"
                     label="City"
                     placeholder="City"
                     v-model="user.city">
-          </fg-input>
+          </base-input>
         </div>
         <div class="col-md-4">
-          <fg-input type="text"
+          <base-input type="text"
                     label="Country"
                     placeholder="Country"
                     v-model="user.country">
-          </fg-input>
+          </base-input>
         </div>
         <div class="col-md-4">
-          <fg-input type="number"
+          <base-input type="number"
                     label="Postal Code"
                     placeholder="ZIP Code"
                     v-model="user.postalCode">
-          </fg-input>
+          </base-input>
         </div>
       </div>
 

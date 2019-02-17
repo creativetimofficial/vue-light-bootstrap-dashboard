@@ -22,7 +22,7 @@
 </template>
 <script>
   export default {
-    name: 'drop-down',
+    name: 'base-dropdown',
     props: {
       title: String,
       icon: String,
