@@ -7,7 +7,7 @@
           <fg-input type="text"
                     label="Company"
                     :disabled="true"
-                    placeholder="Paper dashboard"
+                    placeholder="Light dashboard"
                     v-model="user.company">
           </fg-input>
         </div>
@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-4">
           <fg-input type="email"
-                    label="Username"
+                    label="Email"
                     placeholder="Email"
                     v-model="user.email">
           </fg-input>
@@ -108,7 +108,7 @@
     data () {
       return {
         user: {
-          company: 'Paper Dashboard',
+          company: 'Light dashboard',
           username: 'michael23',
           email: '',
           firstName: 'Mike',
