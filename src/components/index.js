@@ -1,8 +1,8 @@
-import Checkbox from './Inputs/Checkbox.vue'
-import Radio from './Inputs/Radio.vue'
-import FormGroupInput from './Inputs/formGroupInput.vue'
+import BaseCheckbox from './Inputs/BaseCheckbox.vue'
+import Radio from './Inputs/BaseRadio.vue'
+import BaseInput from './Inputs/BaseInput.vue'
 
-import DropDown from './Dropdown.vue'
+import BaseDropdown from './BaseDropdown.vue'
 import Table from './Table.vue'
 
 import Card from './Cards/Card.vue'
@@ -12,14 +12,14 @@ import StatsCard from './Cards/StatsCard.vue'
 import SidebarPlugin from './SidebarPlugin'
 
 let components = {
-  Checkbox,
+  BaseCheckbox,
   Radio,
-  FormGroupInput,
+  BaseInput,
   Card,
   ChartCard,
   StatsCard,
   Table,
-  DropDown,
+  BaseDropdown,
   SidebarPlugin
 }
 

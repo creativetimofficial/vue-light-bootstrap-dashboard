@@ -37,7 +37,7 @@
 <script>
   export default {
     inheritAttrs: false,
-    name: "fg-input",
+    name: "base-input",
     props: {
       label: {
         type: String,

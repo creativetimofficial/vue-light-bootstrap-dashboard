@@ -1,28 +1,24 @@
 <template>
-  <div class="form-check" :class="{disabled: disabled}">
+  <div class="form-check-radio">
     <label :for="cbId" class="form-check-label">
       <input :id="cbId"
-             class="form-check-input"
-             type="checkbox"
+             type="radio"
              :disabled="disabled"
+             :value="label"
              v-model="model" />
-      <span class="form-check-sign"></span>
+      <span class="form-check-sign">
+        <slot></slot>
+      </span>
     </label>
-    <span>
-      <slot></slot>
-    </span>
-
   </div>
 </template>
 <script>
-  export default{
-    name: 'p-checkbox',
-    model: {
-      prop: 'checked'
-    },
+  export default {
+    name: 'base-radio',
     props: {
-      checked: [Array, Boolean],
+      label: [String, Number],
       disabled: [Boolean, String],
+      value: [String, Boolean],
       inline: Boolean
     },
     data () {
@@ -33,16 +29,17 @@
     computed: {
       model: {
         get () {
-          return this.checked
+          return this.value
         },
-        set (check) {
-          this.$emit('input', check)
+        set (value) {
+          this.$emit('input', value)
         }
       },
       inlineClass () {
         if (this.inline) {
-          return `checkbox-inline`
+          return `radio-inline`
         }
+        return ''
       }
     },
     created () {
