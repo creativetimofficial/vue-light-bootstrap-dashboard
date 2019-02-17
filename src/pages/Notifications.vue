@@ -2,12 +2,6 @@
   <div class="content">
     <div class="container-fluid">
       <card>
-        <template slot="header">
-          <h4 class="card-title">Notifications</h4>
-          <p class="card-category">Handcrafted by our friend <a target="_blank" href="https://github.com/cristijora">Cristi Jora</a>. Please checkout the <a
-            href="https://github.com/cristijora/vue-notifyjs" target="_blank">full documentation.</a></p>
-
-        </template>
         <div class="row">
           <div class="col-md-6">
             <h5>Notifications Style</h5>
