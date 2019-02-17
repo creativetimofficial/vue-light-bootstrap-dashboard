@@ -1,0 +1,72 @@
+$box-shadow: 0 10px 20px -8px rgba(0,0,0,.15);
+$border-color: rgba(0,0,0,.05);
+$primary: #42b883;
+$orange: #fb6340;
+body{
+  background: white;
+}
+.ct-documentation {
+  table {
+    width: 100%;
+    box-shadow: $box-shadow;
+    display: table;
+    margin: 0;
+    border-top: none;
+  }
+  th {
+    padding: 10px;
+    border: none;
+  }
+  tr {
+    border-top: 1px solid hsla(0,0%,100%,.1);
+  }
+  thead tr {
+    border-top: none;
+  }
+  tr:nth-child(2n) {
+    background: transparent;
+  }
+  table.table thead tr th,
+  table.table tbody tr td {
+    border: none;
+    color: hsla(0,0%,100%,.7) !important;
+  }
+
+
+  .demo-block {
+    margin-top: 30px;
+    box-shadow: $box-shadow;
+    border: 1px solid $border-color;
+  }
+
+  .icon.outbound {
+    width: 12px;
+    heigth: 12px;
+  }
+
+  pre code,
+  pre code .token {
+    line-height: 22px;
+    font-size: 14px !important;
+  }
+
+  h1, h2, h3 {
+    padding-left: 1.25rem;
+    border-left: 2px solid $primary;
+    padding-top: 12px !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0;
+    &:hover .header-anchor {
+      opacity: 0;
+    }
+  }
+
+}
+
+.bd-docs div[class*="language-"] .highlight-lines {
+  line-height: 1.6;
+}
+.bd-docs .sidebar {
+  background: #f5f6fa;
+  box-shadow: none;
+}
