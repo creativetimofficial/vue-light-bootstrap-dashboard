@@ -7,7 +7,7 @@ designed for vue js. The dashboard includes Bootstrap 4, vue-router, chartist, g
 
 Check the [Live Demo here](http://vuejs.creative-tim.com/vue-light-bootstrap-dashboard).
 
-![](static/Dashboard.PNG)
+![](public/Dashboard.PNG)
 ## :rocket: Getting started
 
 Vue Light Bootstrap Dashboard is built on top of Bootstrap 4, Vuejs and Vue-router. To get started do the following steps:

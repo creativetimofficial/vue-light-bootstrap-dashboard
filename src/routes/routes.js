@@ -1,15 +1,16 @@
-import DashboardLayout from '../components/Dashboard/Layout/DashboardLayout.vue'
+import DashboardLayout from '../layout/DashboardLayout.vue'
 // GeneralViews
-import NotFound from '../components/GeneralViews/NotFoundPage.vue'
+import NotFound from '../pages/NotFoundPage.vue'
 
 // Admin pages
-import Overview from 'src/components/Dashboard/Views/Overview.vue'
-import UserProfile from 'src/components/Dashboard/Views/UserProfile.vue'
-import TableList from 'src/components/Dashboard/Views/TableList.vue'
-import Typography from 'src/components/Dashboard/Views/Typography.vue'
-import Icons from 'src/components/Dashboard/Views/Icons.vue'
-import Maps from 'src/components/Dashboard/Views/Maps.vue'
-import Notifications from 'src/components/Dashboard/Views/Notifications.vue'
+import Overview from 'src/pages/Overview.vue'
+import UserProfile from 'src/pages/UserProfile.vue'
+import TableList from 'src/pages/TableList.vue'
+import Typography from 'src/pages/Typography.vue'
+import Icons from 'src/pages/Icons.vue'
+import Maps from 'src/pages/Maps.vue'
+import Notifications from 'src/pages/Notifications.vue'
+import Upgrade from 'src/pages/Upgrade.vue'
 
 const routes = [
   {
@@ -56,6 +57,11 @@ const routes = [
         path: 'notifications',
         name: 'Notifications',
         component: Notifications
+      },
+      {
+        path: 'upgrade',
+        name: 'Upgrade to PRO',
+        component: Upgrade
       }
     ]
   },
