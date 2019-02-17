@@ -1,6 +1,7 @@
 .sidebar,
 body > .navbar-collapse{
-    position: absolute;
+    position: fixed;
+    height: 100vh;
     top: 0;
     bottom: 0;
     left: 0;
@@ -19,7 +20,7 @@ body > .navbar-collapse{
         overflow: auto;
         width: 260px;
         z-index: 4;
-        padding-bottom: 100px;
+        padding-bottom: 20px;
     }
 
     .sidebar-background{
@@ -35,9 +36,7 @@ body > .navbar-collapse{
     }
 
     .logo{
-        padding: 10px 5px;
-        margin: 0 20px;
-
+        padding: 10px 15px 9px 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         position: relative;
         z-index: 4;
@@ -53,29 +52,31 @@ body > .navbar-collapse{
 
         .simple-text{
             text-transform: uppercase;
-            padding: $padding-zero;
-            display: block;
+            padding: $padding-small-vertical $padding-zero;
             font-size: $font-size-large;
             color: $white-color;
-            text-align: left;
+            text-align: center;
             font-weight: $font-weight-normal;
-            line-height: 40px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
 
             .logo-img{
-                width: 40px;
-                display: inline-block;
-                height: 40px;
-                margin-left: 0px;
-                margin-right: 10px;
-                background: white;
-                border-radius: 40px;
-                text-align: center;
+              width: 40px;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              height: 40px;
+              margin-left: 0px;
+              margin-right: 10px;
+              background: white;
+              border-radius: 40px;
 
               img{
-                  max-width: 21px;
+                max-width: 21px;
               }
             }
-        }
+          }
     }
 
     .logo-tim{
@@ -185,6 +186,32 @@ body > .navbar-collapse{
         }
     }
 
+    .logo{
+        padding: $navbar-padding-a;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+        p{
+            float: left;
+            font-size: 20px;
+            margin: 10px 10px;
+            color: $white-color;
+            line-height: 20px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .simple-text{
+            text-transform: uppercase;
+            padding: $padding-small-vertical $padding-zero;
+            display: flex;
+            align-items: center;
+            font-size: $font-size-large;
+            color: $white-color;
+            text-align: center;
+            font-weight: $font-weight-normal;
+            line-height: 30px;
+        }
+    }
+
     .logo-tim{
         border-radius: 50%;
         border: 1px solid #333;
@@ -229,7 +256,7 @@ body > .navbar-collapse{
     }
 
     &[data-color="black"]:after{
-        @include icon-gradient($black-color-filter-top, $black-color-filter-bottom);
+      @include icon-gradient($black-color-top, $black-color-bottom);
     }
     &[data-color="blue"]:after{
         @include icon-gradient($new-dark-blue, $blue-color-bottom);
@@ -249,7 +276,6 @@ body > .navbar-collapse{
     &[data-color="purple"]:after{
         @include icon-gradient($new-purple, $purple-color-bottom);
     }
-
 }
 
 
@@ -276,7 +302,6 @@ body > .navbar-collapse{
 
 .sidebar,
 .main-panel{
-    overflow: auto;
     max-height: 100%;
     height: 100%;
     -webkit-transition-property: top,bottom;
