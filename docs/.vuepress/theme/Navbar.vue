@@ -2,7 +2,7 @@
     <base-nav class="main-nav flex-row align-items-md-center" type="" effect="light" expand>
         <a slot="brand" class="navbar-brand mr-0 mr-md-2" href="/"
            aria-label="Bootstrap">
-            Vue Black Dashboard
+            Vue Light Bootstrap Dashboard
         </a>
 
         <div class="row" slot="content-header" slot-scope="{closeMenu}">
@@ -53,10 +53,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/vue-black-dashboard"><i class="tim-icons icon-tv-2"></i> Live Preview</a>
+            <a class="nav-link" href="https://demos.creative-tim.com/vue-light-bootstrap-dashboard"><i class="tim-icons icon-tv-2"></i> Live Preview</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/creativetimofficial/vue-black-dashboard" target="_blank" rel="noopener"><i class="tim-icons icon-shape-star"></i> Help with a star</a>
+            <a class="nav-link" href="https://github.com/creativetimofficial/vue-light-bootstrap-dashboard" target="_blank" rel="noopener"><i class="tim-icons icon-shape-star"></i> Help with a star</a>
           </li>
         </ul>
       </div>
@@ -76,7 +76,7 @@
     nav.main-nav {
       z-index: 50;
         &.navbar {
-            background-color: #42b883;
+            background-color: #3472F7;
             box-shadow: rgba(116, 129, 141, .1) 0 1px 1px 0;
             position: fixed;
             .container {

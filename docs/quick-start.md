@@ -30,8 +30,10 @@ it's easier to use them across the app without importing them each time.
 
 Here's the list of global components:
 
-- **FgInput**
-- **DropDown**
+- **BaseInput**
+- **BaseCheckbox**
+- **BaseRadio**
+- **BaseDropdown**
 - **Card**
 
 #### Local components

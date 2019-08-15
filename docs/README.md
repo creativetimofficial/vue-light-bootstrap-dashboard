@@ -40,8 +40,7 @@ This Design System is fully coded and built on top of Open Source, more details 
 - [Vue](http://vuejs.org/) - The Progressive JavaScript Framework
 - [Vue CLI](https://cli.vuejs.org/) - 🛠️ Standard Tooling for Vue.js Development
 - [Vue Router](https://router.vuejs.org/) - Router for Vue.js
-- [Poppins Font](https://fonts.google.com/specimen/Poppins) - Google’s Open Source typefaces
-- [WebGradients](https://webgradients.com/) - A curated collection of splendid gradients made in CSS3
+- [Montserrat Font](https://fonts.google.com/specimen/Montserrat) - Google’s Open Source typefaces
 
 #### Learn more
 
