@@ -19,8 +19,8 @@ Vue Black Dashboard is built as Vue plugin so you can simply import it and use i
 
 ```js
 import Vue from 'vue';
-import DashboardPlugin from '@/plugins/blackDashboard'
-Vue.use(DashboardPlugin);
+import LightBootstrap from './light-bootstrap-main'
+Vue.use(LightBootstrap);
 ```
 
 #### Global Components
@@ -30,6 +30,7 @@ it's easier to use them across the app without importing them each time.
 
 Here's the list of global components:
 
+- **BaseButton**
 - **BaseInput**
 - **BaseCheckbox**
 - **BaseRadio**
@@ -54,14 +55,3 @@ Here's the list of local components:
 - **StatsCard**
 - **Sidebar**
 - **SidebarLink**
-
-#### Starter template
-
-To get started faster, we provide a starter template inside the project. It's a bare bones
-layout with nav, footer and a hello world. To enable it go to **main.js** and change line 3
-
-```js{3}
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./starterRouter";
-```
