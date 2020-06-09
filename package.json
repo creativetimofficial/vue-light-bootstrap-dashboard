@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "chartist": "^0.11.0",
+    "core-js": "^2.6.11",
     "google-maps": "^3.2.1",
     "register-service-worker": "^1.5.2",
     "v-tooltip": "^2.0.0-rc.33",
