@@ -14,7 +14,7 @@ import './assets/sass/light-bootstrap-dashboard.scss'
 import './assets/css/demo.css'
 
 /**
- * This is the main Light Bootstrap Dashboard Vue plugin where dashboard related plugins are registerd.
+ * This is the main Light Bootstrap Dashboard Vue plugin where dashboard related plugins are registered.
  */
 export default {
   install (Vue) {
