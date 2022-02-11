@@ -17,6 +17,7 @@
     "chartist": "^0.11.0",
     "google-maps": "^3.2.1",
     "register-service-worker": "^1.5.2",
+    "sass": "^1.49.7",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
@@ -27,7 +28,6 @@
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-plugin-pwa": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
-    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.6"
   },
