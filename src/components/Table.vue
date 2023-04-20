@@ -3,35 +3,38 @@
     <thead>
       <slot name="columns">
         <tr>
-          <th v-for="column in columns" :key="column">{{column}}</th>
+          <th v-for="column in columns" :key="column">{{ column }}</th>
         </tr>
       </slot>
     </thead>
     <tbody>
-    <tr v-for="(item, index) in data" :key="index">
-      <slot :row="item">
-        <td v-for="column in columns" :key="column" v-if="hasValue(item, column)">{{itemValue(item, column)}}</td>
-      </slot>
-    </tr>
+      <tr v-for="(item, index) in data" :key="index">
+        <slot :row="item">
+          <template v-for="column in columns">
+            <td :key="column" v-if="hasValue(item, column)">
+              {{ itemValue(item, column) }}
+            </td>
+          </template>
+        </slot>
+      </tr>
     </tbody>
   </table>
 </template>
 <script>
-  export default {
-    name: 'l-table',
-    props: {
-      columns: Array,
-      data: Array
+export default {
+  name: "l-table",
+  props: {
+    columns: Array,
+    data: Array,
+  },
+  methods: {
+    hasValue(item, column) {
+      return item[column.toLowerCase()] !== "undefined";
     },
-    methods: {
-      hasValue (item, column) {
-        return item[column.toLowerCase()] !== 'undefined'
-      },
-      itemValue (item, column) {
-        return item[column.toLowerCase()]
-      }
-    }
-  }
+    itemValue(item, column) {
+      return item[column.toLowerCase()];
+    },
+  },
+};
 </script>
-<style>
-</style>
+<style></style>
