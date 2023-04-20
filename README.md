@@ -53,5 +53,5 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 [changelog]: ./CHANGELOG.md
 [license]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-2.1.0-blue.svg
+[version-badge]: https://img.shields.io/badge/version-2.1.1-blue.svg
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg

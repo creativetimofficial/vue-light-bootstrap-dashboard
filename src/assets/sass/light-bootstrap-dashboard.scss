@@ -1,7 +1,7 @@
 /*!
 
  =========================================================
- * Vue Light Bootstrap Dashboard - v2.1.0 (Bootstrap 4)
+ * Vue Light Bootstrap Dashboard - v2.1.1 (Bootstrap 4)
  =========================================================
 
  * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
