@@ -1,6 +1,10 @@
 # Change Log
 
-## [2.1.0] 2023-01-10
+## [2.1.1] 2023-05-31
+
+- Update dependencies
+
+## [2.1.0] 2022-12-12
 
 - Update dependencies and devDependencies
 - Migrate from `node-sass` to `sass`
