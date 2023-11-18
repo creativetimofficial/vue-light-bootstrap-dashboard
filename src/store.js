@@ -8,11 +8,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     userData: null,
+    cachedChartData: {},
   },
   mutations: {
     saveUserData(state, userData) {
       state.userData = userData;
     },
+    saveCachedChartData(state, { chartType, data }) {
+        state.cachedChartData[chartType] = data;
+      },
   },
   actions: {
     saveUserData({ commit }, userData) {
@@ -21,5 +25,8 @@ export default new Vuex.Store({
   },
   getters: {
     getUserData: (state) => state.userData,
+    getCachedChartData: (state) => (chartType) => {
+        return state.cachedChartData[chartType] || null;
+    },
   },
 });

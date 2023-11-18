@@ -11,6 +11,8 @@
           </select>
         </div>
       </div>
+    <div v-if="loading">Loading...</div>
+    <div v-else>
       <template v-if="selectedChartType === 'station'">
         <div class="row">
           <div class="col-md-4">
@@ -66,7 +68,7 @@
           </div>
         </div>
       </template>
-      <!-- --------------------------------------- -->
+    <!-- --------------------------------------- -->
       <template v-if="selectedChartType === 'bike'">
         <div class="row">
           <div class="col-md-4">
@@ -102,6 +104,27 @@
           </div>
         </div>
       </template>
+    <!-- ------------------------------------------------- -->
+      <template v-if="selectedChartType === 'user'">
+        <div class="row">
+          <div class="col-md-4">
+            <chart-card :chart-data="pieChartUserCountry.data" chart-type="Pie">
+              <template slot="header">
+                <h4 class="card-title">User statistics</h4>
+                <p class="card-category">Number of users in country</p>
+              </template>
+              <template slot="footer">
+                <div class="legend">
+                  <i class="fa fa-circle text-info"></i> CAN
+                  <i class="fa fa-circle text-danger"></i> US
+                </div>
+                <hr>
+              </template>
+            </chart-card>
+          </div>
+        </div>
+      </template>
+    </div>
       </div>
     </div>
 </template>
@@ -110,6 +133,7 @@
   import StatsCard from 'src/components/Cards/StatsCard.vue'
   import LTable from 'src/components/Table.vue'
   import ApiServices from 'src/services/ApiServices.js';
+  import store from 'src/store'; 
 
   export default {
     components: {
@@ -122,6 +146,7 @@
         selectedChartType: 'station', // Default selected option
         editTooltip: 'Edit Task',
         deleteTooltip: 'Remove',
+        loading: false,
         pieChartStationCountry: {
           data: {
             labels: [],
@@ -147,6 +172,12 @@
           }
         },
         pieChartRideable: {
+          data: {
+            labels: [],
+            series: []
+          },
+        },
+        pieChartUserCountry: {
           data: {
             labels: [],
             series: []
@@ -188,45 +219,123 @@
         };
       },
       async updateChartData(chartType) {
-        if (chartType === 'station') {
-          let endpoints = ["station_count_in_country", "station_count_in_city", "station_count_in_rides"]
-          for (let x in endpoints) {
-            await ApiServices.get(endpoints[x])
-            .then(response => {
-              // Update the corresponding chart data based on the API response
-              if (endpoints[x] === 'station_count_in_country') {
-                this.pieChartStationCountry.data = this.formatChartData(response);
-                // console.log(this.formatChartData(response))
-              } else if (endpoints[x] === 'station_count_in_city') {
-                this.pieChartStationCity.data = this.formatChartData(response);
-              } else if (endpoints[x] === 'station_count_in_rides') {
-                this.pieChartStationRide.data = this.formatChartData(response);
-                // console.log(this.pieChartStationRide.data)
+        const cachedData = store.getters.getCachedChartData(chartType);
+
+        if (cachedData) {
+          // Use cached data
+          console.log("cachedData", cachedData)
+          for (let x in cachedData){
+            if (chartType === 'station') {
+              let endpoints = ["station_count_in_country", "station_count_in_city", "station_count_in_rides"]
+              for (let x in endpoints) {
+                let chartData = cachedData[endpoints[x]]
+                if (endpoints[x] === 'station_count_in_country') {
+                  this.pieChartStationCountry.data = chartData;
+                } else if (endpoints[x] === 'station_count_in_city') {
+                  this.pieChartStationCity.data = chartData;
+                } else if (endpoints[x] === 'station_count_in_rides') {
+                  this.pieChartStationRide.data = chartData;
+                }
               }
-            })
-            .catch(error => {
-              console.error('Error fetching chart data:', error);
-            });
-          }
-        }
-        else if (chartType === 'bike') {
-          let endpoints = ["bike_count_in_country", "rideable_type_count"]
-          for (let x in endpoints) {
-            await ApiServices.get(endpoints[x])
-            .then(response => {
-              if (endpoints[x] === 'bike_count_in_country') {
-                this.pieChartBikeCountry.data = this.formatChartData(response);
-              } else if (endpoints[x] === 'rideable_type_count') {
-                this.pieChartRideable.data = this.formatChartData(response);
-                console.log(this.pieChartRideable.data)
+            } else if (chartType === 'bike') {
+              let endpoints = ["bike_count_in_country", "rideable_type_count"]
+              for (let x in endpoints) {
+                let chartData = cachedData[endpoints[x]]
+                if (endpoints[x] === 'bike_count_in_country') {
+                  this.pieChartBikeCountry.data = chartData;
+                } else if (endpoints[x] === 'rideable_type_count') {
+                  this.pieChartRideable.data = chartData;
+                }
               }
-            })
-            .catch(error => {
-              console.error('Error fetching chart data:', error);
-            });
+            } else if (chartType === 'user') {
+              let endpoints = ["user_count_in_country"]
+              for (let x in endpoints) {
+                let chartData = cachedData[endpoints[x]]
+                chartStationData[endpoints[x]] = chartData
+              }
+            }
           }
+        } else {
+          this.loading = true;
+          try {
+            if (chartType === 'station') {
+              let endpoints = ["station_count_in_country", "station_count_in_city", "station_count_in_rides"]
+              let chartStationData = {}
+              for (let x in endpoints) {
+                await ApiServices.get(endpoints[x])
+                .then(response => {
+                  let formatChartData = this.formatChartData(response)
+                  chartStationData[endpoints[x]] = formatChartData
+                  // Update the corresponding chart data based on the API response
+                  if (endpoints[x] === 'station_count_in_country') {
+                    this.pieChartStationCountry.data = formatChartData;
+                    // console.log(this.formatChartData(response))
+                  } else if (endpoints[x] === 'station_count_in_city') {
+                    this.pieChartStationCity.data = formatChartData;
+                  } else if (endpoints[x] === 'station_count_in_rides') {
+                    this.pieChartStationRide.data = formatChartData;
+                    // console.log(this.pieChartStationRide.data)
+                  }
+                })
+                .catch(error => {
+                  console.error('Error fetching chart data:', error);
+                });
+              }
+              store.commit('saveCachedChartData', {
+                chartType,
+                data: chartStationData,
+              });
+            }
+            else if (chartType === 'bike') {
+              let endpoints = ["bike_count_in_country", "rideable_type_count"]
+              let chartStationData = {}
+              for (let x in endpoints) {
+                await ApiServices.get(endpoints[x])
+                .then(response => {
+                  let formatChartData = this.formatChartData(response)
+                  chartStationData[endpoints[x]] = formatChartData
+                  if (endpoints[x] === 'bike_count_in_country') {
+                    this.pieChartBikeCountry.data = formatChartData;
+                  } else if (endpoints[x] === 'rideable_type_count') {
+                    this.pieChartRideable.data = formatChartData;
+                  }
+                })
+                .catch(error => {
+                  console.error('Error fetching chart data:', error);
+                });
+              }
+              store.commit('saveCachedChartData', {
+                chartType,
+                data: chartStationData,
+              });
+            }
+            else if (chartType === 'user') {
+              let endpoints = ["user_count_in_country"]
+              let chartStationData = {}
+              for (let x in endpoints) {
+                await ApiServices.get(endpoints[x])
+                .then(response => {
+                  let formatChartData = this.formatChartData(response)
+                  chartStationData[endpoints[x]] = formatChartData
+                  // if (endpoints[x] === 'bike_count_in_country') {
+                    this.pieChartUserCountry.data = formatChartData;
+                  // } 
+                  console.log(this.pieChartUserCountry.data)
+                })
+                .catch(error => {
+                  console.error('Error fetching chart data:', error);
+                });
+              }
+              store.commit('saveCachedChartData', {
+                chartType,
+                data: chartStationData,
+              });
+            }
+          } finally {
+          this.loading = false;
         }
-      },
+        }
+      }
     },
     created(){
       let endpoints = ["station_count_in_country", "station_count_in_city", "station_count_in_rides"]
