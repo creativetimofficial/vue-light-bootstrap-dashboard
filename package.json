@@ -25,7 +25,8 @@
     "v-tooltip": "2.0.0-rc.33",
     "vue": "2.7.14",
     "vue-router": "3.0.2",
-    "vue2-google-maps": "0.10.7"
+    "vue2-google-maps": "0.10.7",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "3.12.1",

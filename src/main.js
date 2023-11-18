@@ -26,6 +26,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 // router setup
 import routes from "./routes/routes";
 
+import store from './store';
+
 import "./registerServiceWorker";
 // plugin setup
 Vue.use(VueRouter);
@@ -46,9 +48,37 @@ const router = new VueRouter({
   },
 });
 
+router.beforeEach((to, from, next) => {
+  // Check if the route requires authentication
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // Check if the user is authenticated (you should implement your own authentication logic)
+    const userData = JSON.parse(store.getters.getUserData)
+    let isAuthenticated = false;
+    if (userData){
+      isAuthenticated = true;
+    }
+
+    if (!isAuthenticated) {
+      // If not authenticated, redirect to the login page
+      store.dispatch('saveUserData', null);
+      console.log(JSON.parse(store.getters.getUserData));
+      next({ name: 'login' });
+    } else {
+      // If authenticated, proceed to the requested route
+      next();
+    }
+  } else {
+    // For routes that don't require authentication, proceed
+    store.dispatch('saveUserData', null);
+    console.log(JSON.parse(store.getters.getUserData));
+    next();
+  }
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: "#app",
   render: (h) => h(App),
+  store,
   router,
 });

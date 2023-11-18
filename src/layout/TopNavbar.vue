@@ -1,7 +1,12 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Dashboard</a>
+      <li class="navbar-brand">
+        <router-link to="/admin/overview" class="nav-link">
+          Dashboard
+        </router-link>
+      </li>
+      <!-- <a class="navbar-brand" href="#">Dashboard</a>
       <button type="button"
               class="navbar-toggler navbar-toggler-right"
               :class="{toggled: $sidebar.showSidebar}"
@@ -38,9 +43,9 @@
               <span class="d-lg-block">&nbsp;Search</span>
             </a>
           </li>
-        </ul>
+        </ul> -->
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#">
               Account
             </a>
@@ -53,14 +58,14 @@
             <a class="dropdown-item" href="#">Something</a>
             <div class="divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
-          </base-dropdown>
+          </base-dropdown> -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <router-link to="/login" class="nav-link">
               Log out
-            </a>
+            </router-link>
           </li>
         </ul>
-      </div>
+      <!-- </div> -->
     </div>
   </nav>
 </template>
@@ -98,5 +103,7 @@
 
 </script>
 <style>
-
+.navbar-brand {
+  margin: 0!important;
+}
 </style>

@@ -5,13 +5,6 @@
       <div class="row">
         <div class="col-12">
           <div class="mb-3">
-            <label for="bikeNumberInput" class="form-label">Enter Bike Number:</label>
-            <b-form-input
-              id="bikeNumberInput"
-              v-model="bikeNumber"
-              class="mb-3"
-            ></b-form-input>
-
             <label for="timeRangePicker" class="form-label">Select Time Range:</label>
             <div class="d-flex align-items-center mb-3">
               <VueDatePicker 
@@ -30,8 +23,8 @@
             body-classes="table-full-width table-responsive"
           >
             <template slot="header">
-              <h4 class="card-title">Bike History</h4>
-              <p class="card-category">History for Bike Number: {{ bikeNumber }}</p>
+              <h4 class="card-title">Rental History</h4>
+              <p class="card-category">History for User ID: {{ userId }}</p>
             </template>
             
             <l-table
@@ -77,7 +70,7 @@ export default {
   },
   data() {
     return {
-      bikeNumber: '',
+      userId: '',
       dateRange: null,
       rentalHistory: [],
       table: {
@@ -87,10 +80,15 @@ export default {
   },
   methods: {
     fetchRentalHistory() {
+      // Retrieve data from local storage
+      const storedData = localStorage.getItem('user');
+      // Parse the JSON data
+      const parsedData = JSON.parse(storedData);
+      this.userId = parsedData.userId
       const startDate = this.dateRange ? this.dateRange[0] : "";
       const endDate = this.dateRange ? this.dateRange[1] : "";
 
-      this.rentalHistory = fetchRentalHistoryAPI(this.bikeNumber, startDate, endDate);
+      this.rentalHistory = fetchRentalHistoryAPI(this.userId, startDate, endDate);
     },
   },
 };

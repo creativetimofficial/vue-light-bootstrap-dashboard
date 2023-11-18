@@ -7,7 +7,7 @@
       <div class="logo">
         <a href="#" class="simple-text logo__container">
             <div class="logo-img">
-                <img src="img/vue-logo.png" alt="">
+                <img src="img/113815_bike_512x512.png" alt="">
             </div>
           {{title}}
         </a>
@@ -43,7 +43,7 @@
     props: {
       title: {
         type: String,
-        default: 'Vue LBD'
+        default: 'BIKE SHARE'
       },
       backgroundColor: {
         type: String,

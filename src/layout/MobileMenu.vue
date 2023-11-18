@@ -28,9 +28,9 @@
     </base-dropdown>
 
     <li class="nav-item">
-      <a class="nav-link" href="#pablo">
+      <router-link to="/login" class="nav-link">
         <span class="no-icon">Log out</span>
-      </a>
+      </router-link>
     </li>
   </ul>
 </template>

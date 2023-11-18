@@ -10,34 +10,34 @@
         <i class="nc-icon nc-circle-09"></i>
         <p>User Profile</p>
       </sidebar-link>
-      <sidebar-link to="/admin/table-list">
-        <i class="nc-icon nc-notes"></i>
-        <p>Table list</p>
-      </sidebar-link>
-      <sidebar-link to="/admin/typography">
-        <i class="nc-icon nc-paper-2"></i>
-        <p>Typography</p>
-      </sidebar-link>
-      <sidebar-link to="/admin/icons">
-        <i class="nc-icon nc-atom"></i>
-        <p>Icons</p>
-      </sidebar-link>
-      <sidebar-link to="/admin/maps">
-        <i class="nc-icon nc-pin-3"></i>
-        <p>Maps</p>
-      </sidebar-link>
       <sidebar-link to="/admin/ride">
         <i class="fa fa-bicycle"></i>
         <p>Bike Rental</p>
       </sidebar-link>
-
-      <template slot="bottom-links">
+      <sidebar-link to="/admin/station_list">
+        <i class="nc-icon nc-paper-2"></i>
+        <p>Station List</p>
+      </sidebar-link>
+      <sidebar-link to="/admin/user_history">
+        <i class="nc-icon nc-atom"></i>
+        <p>User History</p>
+      </sidebar-link>
+      <sidebar-link to="/admin/user_history_admin">
+        <i class="nc-icon nc-pin-3"></i>
+        <p>User History Admin</p>
+      </sidebar-link>
+      <sidebar-link to="/admin/bike_history">
+        <i class="nc-icon nc-notes"></i>
+        <p>Bike History</p>
+      </sidebar-link>
+      
+      <!-- <template slot="bottom-links">
         <sidebar-link class="active"
                       to="/admin/upgrade">
           <i class="nc-icon nc-alien-33"></i>
           <p>Upgrade to PRO</p>
         </sidebar-link>
-      </template>
+      </template> -->
     </side-bar>
     <div class="main-panel">
       <top-navbar></top-navbar>

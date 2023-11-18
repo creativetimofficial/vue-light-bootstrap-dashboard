@@ -48,21 +48,21 @@
     },
     methods: {
       handleButtonClick() {
-        // Handle the button click event here
+        // // Handle the button click event here
         console.log('Button clicked!');
-        const params = {
-          station_name: "Kennedy Center"
-        };
-        // axios.get('https://api.example.com/data')
-        ApiServices.getVehicle(params)
-        .then(response => {
-          // Handle the successful response here
-          console.log(response);
-        })
-        .catch(error => {
-          // Handle errors here
-          console.error('Error fetching data:', error);
-        });
+        // const params = {
+        //   station_name: "Kennedy Center"
+        // };
+        // // axios.get('https://api.example.com/data')
+        // ApiServices.getVehicle(params)
+        // .then(response => {
+        //   // Handle the successful response here
+        //   console.log(response);
+        // })
+        // .catch(error => {
+        //   // Handle errors here
+        //   console.error('Error fetching data:', error);
+        // });
         // ApiServices.getVehicle(params)
         // .then(data => {
         //   console.log('Data from API:', data);

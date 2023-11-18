@@ -17,6 +17,7 @@
                   <label for="password">Password:</label>
                   <input type="password" class="form-control" v-model="password" required>
                 </div>
+                <p class="mess">{{ message }}</p>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
               </form>
             </div>
@@ -28,21 +29,77 @@
 </template>
 
 <script>
+// import routes from '../routes/routes';
+import ApiServices from 'src/services/ApiServices.js';
+import store from 'src/store'; 
+
 export default {
   data() {
     return {
       username: '',
-      password: ''
+      password: '',
+      message: '',
     };
   },
   methods: {
-    login() {
-      // Implement your login logic here
-      // For simplicity, let's just log the credentials for now
-      console.log('Username:', this.username);
-      console.log('Password:', this.password);
-    }
-  }
+    async login() {
+      try {
+        let params = {
+          user_name: this.username,
+          user_password: this.password,
+        };
+
+        console.log(params);
+
+        const response = await ApiServices.post("login", params);
+        this.message = response.message;  
+        // Assuming the API returns a property named 'isAuthenticated'
+        if (response.isAuthenticated) {
+          store.dispatch('saveUserData', response.data);
+          console.log("user Data", JSON.parse(store.getters.getUserData)["0"]["user_id"])
+          // let userDataArray = store.getters.getUserData
+          // if (Array.isArray(userDataArray) && userDataArray.length > 0) {
+          //   console.log(userDataArray[0].user_id);
+          // }
+          // if (!Array.isArray(userDataArray)) {
+          //   console.error('userDataArray is not an array.');}
+          this.$router.push("/admin/overview");
+        } else {
+          // Handle authentication failure
+          console.error('Login failed:', response.message);
+        }
+      } catch (error) {
+        // Handle network errors or other issues
+        console.error('Login failed:', error.message);
+      }
+    },
+
+        // Call your API endpoint for login
+        // const response = await axios.post('your-login-api-endpoint', {
+        //   username: this.username,
+        //   password: this.password
+        // });
+
+        // Assuming your API returns user information
+        // const userData = response.data;
+
+        // Save user information to use later
+        // this.$store.dispatch('saveUserData', userData);
+
+        // Redirect to another page (for example, a dashboard)
+      //   this.$router.push("/admin/overview");
+      // } catch (error) {
+      //   console.error('Login failed:', error.message);
+        // Handle login failure, show an error message, etc.
+      // }
+      
+    // }
+  },
+  created() {
+    // console.log('Component Store:', this.$store);
+    // console.log(store)
+  },
+
 };
 </script>
 
@@ -54,8 +111,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
-/* .btn-primary {
-  background-color: ;
-} */
-/* Add your additional styling here if needed */
+.mess {
+  color: rgb(118, 156, 40);
+}
 </style>

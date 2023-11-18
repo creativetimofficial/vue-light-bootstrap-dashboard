@@ -24,6 +24,15 @@ const ApiServices = {
       });
   },
 
+  // Generic POST request
+  async post(endpoint, parameters) {
+    return await axios.post(`${API_BASE_URL}/${endpoint}`, parameters)
+      .then(response => response.data)
+      .catch(error => {
+        throw error;
+      });
+  },
+
 //   // Generic GET request
 //   get(endpoint) {
 //     return axios.get(`${API_BASE_URL}/${endpoint}`)
@@ -33,14 +42,6 @@ const ApiServices = {
 //       });
 //   },
 
-  // Generic POST request
-//   post(endpoint, data) {
-//     return axios.post(`${API_BASE_URL}/${endpoint}`, data)
-//       .then(response => response.data)
-//       .catch(error => {
-//         throw error;
-//       });
-//   },
 
   // Add more methods for other HTTP methods (PUT, DELETE, etc.) if needed
 };
