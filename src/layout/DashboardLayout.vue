@@ -26,9 +26,9 @@
         <i class="nc-icon nc-pin-3"></i>
         <p>Maps</p>
       </sidebar-link>
-      <sidebar-link to="/admin/notifications">
-        <i class="nc-icon nc-bell-55"></i>
-        <p>Notifications</p>
+      <sidebar-link to="/admin/ride">
+        <i class="fa fa-bicycle"></i>
+        <p>Bike Rental</p>
       </sidebar-link>
 
       <template slot="bottom-links">

@@ -18,7 +18,18 @@ Vue Light Bootstrap Dashboard is built on top of Bootstrap 4, Vuejs and Vue-rout
 3. Type `npm install` in the source folder where `package.json` is located
 4. Type `npm run dev` to start the development server
 
+
 The repo uses [vue-cli](https://github.com/vuejs/vue-cli) scaffolding which takes care of the development setup with webpack and all the necessary modern tools to make web development faster and easier.
+## Fix CORS issue
+
+Open the start menu
+
+Type windows+R or open "Run"
+
+Execute the following command:
+
+```chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security```
+refer: https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome
 
 ## [Documentation](https://demos.creative-tim.com/vue-light-bootstrap-dashboard/documentation/#/buttons)
 

@@ -19,6 +19,9 @@ import App from "./App.vue";
 
 // LightBootstrap plugin
 import LightBootstrap from "./light-bootstrap-main";
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 // router setup
 import routes from "./routes/routes";
@@ -27,6 +30,8 @@ import "./registerServiceWorker";
 // plugin setup
 Vue.use(VueRouter);
 Vue.use(LightBootstrap);
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 // configure router
 const router = new VueRouter({

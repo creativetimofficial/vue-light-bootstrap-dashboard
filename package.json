@@ -13,7 +13,11 @@
     "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "bootstrap": "4.6.0",
+    "@mathieustan/vue-datepicker": "^0.2.11",
+    "axios": "^1.6.0",
+    "bootstrap": "^4.6.0",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "bootstrap-vue": "^2.23.1",
     "cache-loader": "^4.1.0",
     "chartist": "0.11.0",
     "google-maps": "3.2.1",

@@ -5,6 +5,13 @@
       <div class="row">
         <div class="col-12">
           <div class="mb-3">
+            <label for="userIdInput" class="form-label">Enter User Id:</label>
+            <b-form-input
+              id="userIdInput"
+              v-model="userID"
+              class="mb-3"
+            ></b-form-input>
+
             <label for="timeRangePicker" class="form-label">Select Time Range:</label>
             <div class="d-flex align-items-center mb-3">
               <VueDatePicker 
@@ -80,11 +87,6 @@ export default {
   },
   methods: {
     fetchRentalHistory() {
-      // Retrieve data from local storage
-      const storedData = localStorage.getItem('user');
-      // Parse the JSON data
-      const parsedData = JSON.parse(storedData);
-      this.userId = parsedData.userId
       const startDate = this.dateRange ? this.dateRange[0] : "";
       const endDate = this.dateRange ? this.dateRange[1] : "";
 

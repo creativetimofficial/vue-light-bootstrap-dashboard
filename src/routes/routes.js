@@ -11,17 +11,27 @@ import Icons from 'src/pages/Icons.vue'
 import Maps from 'src/pages/Maps.vue'
 import Notifications from 'src/pages/Notifications.vue'
 import Upgrade from 'src/pages/Upgrade.vue'
+import Login from 'src/pages/Login.vue'
+import Ride from 'src/pages/Ride.vue'
 
 const routes = [
   {
-    path: '/',
-    component: DashboardLayout,
-    redirect: '/admin/overview'
+    path: '/login',
+    component: Login,
   },
+  {
+    path: '/',
+    redirect: '/login'
+  },
+  // {
+  //   path: '/',
+  //   component: DashboardLayout,
+  //   redirect: '/admin/overview'
+  // },
   {
     path: '/admin',
     component: DashboardLayout,
-    redirect: '/admin/overview',
+    // redirect: '/admin/overview',
     children: [
       {
         path: 'overview',
@@ -54,9 +64,9 @@ const routes = [
         component: Maps
       },
       {
-        path: 'notifications',
-        name: 'Notifications',
-        component: Notifications
+        path: 'ride',
+        name: 'Ride',
+        component: Ride
       },
       {
         path: 'upgrade',
