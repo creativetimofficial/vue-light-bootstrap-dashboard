@@ -47,18 +47,21 @@ import Card from 'src/components/Cards/Card.vue';
 import { VueDatePicker } from '@mathieustan/vue-datepicker';
 import '@mathieustan/vue-datepicker/dist/vue-datepicker.min.css';
 import { BFormInput, BButton } from 'bootstrap-vue';
+import store from 'src/store'; 
+import ApiServices from 'src/services/ApiServices.js';
 
-// Assume you have a function to fetch rental history from an API
-const fetchRentalHistoryAPI = (bikeNumber, startDate, endDate) => {
-  // Mock data for demonstration
-  return [
-    { rental_id: 1, bike_number: "W004232", rented_at: "2023-07-07T10:00:00", returned_at: "2023-07-07T14:00:00" },
-    { rental_id: 2, bike_number: "W004232", rented_at: "2023-07-10T12:00:00", returned_at: "2023-07-10T16:00:00" },
-    // Add more data as needed
-  ];
-};
+// // Assume you have a function to fetch rental history from an API
+// const fetchRentalHistoryAPI = (bikeNumber, startDate, endDate) => {
+//   // Mock data for demonstration
+//   return [
+//     { rental_id: 1, bike_number: "W004232", rented_at: "2023-07-07T10:00:00", returned_at: "2023-07-07T14:00:00" },
+//     { rental_id: 2, bike_number: "W004232", rented_at: "2023-07-10T12:00:00", returned_at: "2023-07-10T16:00:00" },
+//     // Add more data as needed
+//   ];
+// };
 
-const rentalHistoryColumns = ["Rental_ID", "Bike_Number", "Rented_At", "Returned_At"];
+const rentalHistoryColumns = ["ride_id",  "user_id", "member_casual", "start_station_name", "end_station_name", "bike_number", "rideable_type",];
+
 
 export default {
   components: {
@@ -80,15 +83,28 @@ export default {
   },
   methods: {
     fetchRentalHistory() {
-      // Retrieve data from local storage
-      const storedData = localStorage.getItem('user');
-      // Parse the JSON data
-      const parsedData = JSON.parse(storedData);
-      this.userId = parsedData.userId
-      const startDate = this.dateRange ? this.dateRange[0] : "";
-      const endDate = this.dateRange ? this.dateRange[1] : "";
-
-      this.rentalHistory = fetchRentalHistoryAPI(this.userId, startDate, endDate);
+      const startDate = this.dateRange ? this.dateRange.start : "";
+      const endDate = this.dateRange ? this.dateRange.end : "";
+      // console.log(this.dateRange)
+      // console.log(startDate)
+      // this.rentalHistory = fetchRentalHistoryAPI(this.bikeNumber, startDate, endDate);
+      this.userId = JSON.parse(store.getters.getUserData)["0"]["user_id"]
+      let params = {
+        user_id: this.userId,
+        start_date: new Date(startDate).toISOString(),
+        end_date: new Date(endDate).toISOString(),
+      };
+      console.log("params", params);
+      ApiServices.get("history/user", params)
+        .then(response => {
+          // Handle the successful response here
+          console.log(response);
+          this.rentalHistory = response;
+        })
+        .catch(error => {
+          // Handle errors here
+          console.error('Error fetching data:', error);
+        });
     },
   },
 };

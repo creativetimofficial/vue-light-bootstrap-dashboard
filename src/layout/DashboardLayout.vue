@@ -15,19 +15,19 @@
         <p>Bike Rental</p>
       </sidebar-link>
       <sidebar-link to="/admin/station_list">
-        <i class="nc-icon nc-paper-2"></i>
+        <i class="nc-icon nc-notes"></i>
         <p>Station List</p>
       </sidebar-link>
-      <sidebar-link to="/admin/user_history">
-        <i class="nc-icon nc-atom"></i>
+      <!-- <sidebar-link to="/admin/user_history">
+        <i class="nc-icon nc-paper-2"></i>
+        <p>User History</p>
+      </sidebar-link> -->
+      <sidebar-link to="/admin/user_history_admin">
+        <i class="nc-icon nc-paper-2"></i>
         <p>User History</p>
       </sidebar-link>
-      <sidebar-link to="/admin/user_history_admin">
-        <i class="nc-icon nc-pin-3"></i>
-        <p>User History Admin</p>
-      </sidebar-link>
       <sidebar-link to="/admin/bike_history">
-        <i class="nc-icon nc-notes"></i>
+        <i class="nc-icon nc-paper-2"></i>
         <p>Bike History</p>
       </sidebar-link>
       
