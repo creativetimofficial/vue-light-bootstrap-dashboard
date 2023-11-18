@@ -44,6 +44,7 @@ export default {
       selectedStation: '',
       bikes: [], // This will be populated based on the selected station
       selectedBike: '',
+      start_date: '',
     };
   },
   methods: {
@@ -108,12 +109,16 @@ export default {
       // Disable the RentBike component and show the BikeList
     },
     showReturnPage(bike) {
+      this.start_date = new Date().toLocaleString()
+      const start_station_id = this.stations.find(station => station[1] === this.selectedStation)[0];
+      console.log("start_station_id", start_station_id);
       let data = {
         bike: bike,
         start_country: this.selectedCountry,
         start_city: this.selectedCity,
         start_station: this.selectedStation,
-        start_date: new Date().toLocaleString(),
+        start_station_id: start_station_id,
+        start_date: this.start_date,
         already_rented: true,
         end_country: null,
         end_city: null,
@@ -122,7 +127,7 @@ export default {
       }
       localStorage.setItem('ride', JSON.stringify(data));
       console.log(bike);
-      this.$emit('rent', bike, this.selectedCity, this.selectedStation);
+      this.$emit('rent', bike, this.selectedCity, this.selectedStation, this.start_date);
       // Implement logic to show the return page with bike information
       // Disable the RentBike component
       // Enable the ReturnBike component

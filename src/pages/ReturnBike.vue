@@ -37,6 +37,7 @@
             <p class="card-text">Country: {{ bike.country }}</p>
             <p class="card-text">City: {{ city_name }}</p>
             <p class="card-text">Station: {{ station_name }}</p>
+            <p class="card-text">Start Date: {{ formatDate(start_date) }}</p>
           </div>
         </div>
       </div>
@@ -66,6 +67,7 @@ export default {
     },
     city_name: String,
     station_name: String,
+    start_date: String,
   },
   data() {
     return {
@@ -115,17 +117,32 @@ export default {
           console.error('Error fetching data:', error);
         });
     },
-    returnBike() {
+    async returnBike() {
       // Retrieve data from local storage
       const storedData = localStorage.getItem('ride');
-
+      
+      
       // Parse the JSON data
       const parsedData = JSON.parse(storedData);
+      // console.log(parsedData.start_station)
+      // console.log(this.selectedStation)
+      // console.log(this.stations)
+      // const start_station_id = this.stations.find(station => station[1] === parsedData.start_station)[0];
+      const end_station_id = this.stations.find(station => station[1] === this.selectedStation)[0];
+
       parsedData.end_country = this.selectedCountry
       parsedData.end_city = this.selectedCity
       parsedData.end_station = this.selectedStation
-      parsedData.end_date = new Date().toLocaleString()
+      parsedData.end_date = new Date().toISOString()
+      parsedData.start_date = new Date(parsedData.start_date).toISOString()
+      parsedData.member_casual = "member"
+      parsedData.end_station_id = end_station_id
       console.log(parsedData)
+
+      const response = await ApiServices.post("ride/add", parsedData);
+      // this.message = response.message;
+      console.log(response.message)
+
       let null_data = {
         bike: null,
         start_country: null,
@@ -137,6 +154,9 @@ export default {
         end_city: null,
         end_station: null,
         end_date: null,
+        member_casual: null,
+        start_station_id: null,
+        end_station_id: null,
       }
       localStorage.setItem('ride', JSON.stringify(null_data));
       this.$emit('return');
