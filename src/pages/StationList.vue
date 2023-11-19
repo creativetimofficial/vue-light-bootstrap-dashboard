@@ -101,6 +101,12 @@
         this.table.data = [...response];
         console.log(this.table.data);
         this.countries = Array.from(new Set(this.table.data.map(station => station.country)));
+        this.table.data = this.table.data.map(entry => {
+          return {
+            ...entry,
+            station_id: parseInt(entry.station_id)
+          };
+        });
       })
       .catch(error => {
         // Handle errors here
