@@ -6,7 +6,7 @@
   "author": "cristijora <joracristi@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
+    "build": "cross-env CI=false vue-cli-service build",
     "e2e": "node test/e2e/runner.js",
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve --open",
@@ -30,7 +30,8 @@
     "@vue/cli-service": "3.12.1",
     "sass": "1.56.2",
     "sass-loader": "10.1.1",
-    "vue-template-compiler": "2.7.14"
+    "vue-template-compiler": "2.7.14",
+    "cross-env": "^7.0.3"
   },
   "browserslist": [
     "> 1%",
