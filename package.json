@@ -13,25 +13,33 @@
     "lint-fix": "vue-cli-service lint --fix"
   },
   "dependencies": {
-    "bootstrap": "4.6.0",
+    "@ckeditor/ckeditor5-build-classic": "31.1.0",
+    "@ckeditor/ckeditor5-editor-classic": "31.1.0",
+    "@ckeditor/ckeditor5-vue2": "^3.0.1",
+    "axios": "^1.7.7",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.23.1",
     "cache-loader": "^4.1.0",
     "chartist": "0.11.0",
     "google-maps": "3.2.1",
     "register-service-worker": "1.7.2",
     "v-tooltip": "2.0.0-rc.33",
     "vue": "2.7.14",
+    "vue-ckeditor2": "^2.1.5",
+    "vue-loading-overlay": "^6.0.6",
     "vue-router": "3.0.2",
-    "vue2-google-maps": "0.10.7"
+    "vue2-google-maps": "0.10.7",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "3.12.1",
     "@vue/cli-plugin-eslint": "3.12.1",
     "@vue/cli-plugin-pwa": "3.12.1",
     "@vue/cli-service": "3.12.1",
+    "cross-env": "^7.0.3",
     "sass": "1.56.2",
     "sass-loader": "10.1.1",
-    "vue-template-compiler": "2.7.14",
-    "cross-env": "^7.0.3"
+    "vue-template-compiler": "2.7.14"
   },
   "browserslist": [
     "> 1%",

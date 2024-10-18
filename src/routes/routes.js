@@ -1,18 +1,42 @@
+import store from '../store/index';
+
 import DashboardLayout from '../layout/DashboardLayout.vue'
 // GeneralViews
 import NotFound from '../pages/NotFoundPage.vue'
+import Login from '../pages/Login.vue'
 
 // Admin pages
 import Overview from 'src/pages/Overview.vue'
 import UserProfile from 'src/pages/UserProfile.vue'
-import TableList from 'src/pages/TableList.vue'
-import Typography from 'src/pages/Typography.vue'
-import Icons from 'src/pages/Icons.vue'
-import Maps from 'src/pages/Maps.vue'
-import Notifications from 'src/pages/Notifications.vue'
-import Upgrade from 'src/pages/Upgrade.vue'
+import UserList from 'src/pages/UserList.vue'
+import CategoryList from 'src/pages/CategoryList.vue'
+import ArticleList from 'src/pages/ArticleList.vue'
+
+import UserAdd from '../pages/User/UserAdd.vue'
+import UserEdit from '../pages/User/UserEdit.vue'
+
+import CategoryAdd from '../pages/Category/CategoryAdd.vue'
+import CategoryEdit from '../pages/Category/CategoryEdit.vue'
+
+import ArticleEdit from '../pages/Article/ArticleEdit.vue'
+import ArticleAdd from '../pages/Article/ArticleAdd.vue'
+
+// User
+import UserLayout from '../layout/UserLayout.vue';
 
 const routes = [
+  {
+    path: '/',
+    component: UserLayout,
+    name: 'UserLayout',
+    meta: { guest: true }
+  },
+  {
+    path: '/',
+    component: UserLayout,
+    name: 'UserArticle',
+    meta: { guest: true }
+  },
   {
     path: '/',
     component: DashboardLayout,
@@ -22,59 +46,83 @@ const routes = [
     path: '/admin',
     component: DashboardLayout,
     redirect: '/admin/overview',
+    name: 'dashboard',
     children: [
+      {
+        path: 'login',
+        name: 'Login',
+        component: Login,
+        meta: { guest: true }
+      },
       {
         path: 'overview',
         name: 'Overview',
-        component: Overview
+        component: Overview,
+        meta: { requiresAuth: true },
       },
       {
         path: 'user',
         name: 'User',
-        component: UserProfile
+        component: UserProfile,
+        meta: { requiresAuth: true },
       },
       {
-        path: 'table-list',
-        name: 'Table List',
-        component: TableList
+        path: 'users',
+        name: 'UserList',
+        component: UserList,
+        meta: { requiresAuth: true },
       },
       {
-        path: 'typography',
-        name: 'Typography',
-        component: Typography
+        path: 'users/edit/:id',
+        name: 'UsersEdit',
+        component: UserEdit,
+        meta: { requiresAuth: true },
       },
       {
-        path: 'icons',
-        name: 'Icons',
-        component: Icons
+        path: 'users/add',
+        name: 'UsersAdd',
+        component: UserAdd,
+        meta: { requiresAuth: true },
       },
       {
-        path: 'maps',
-        name: 'Maps',
-        component: Maps
+        path: 'articles',
+        name: 'ArticleList',
+        component: ArticleList,
+        meta: { requiresAuth: true },
       },
       {
-        path: 'notifications',
-        name: 'Notifications',
-        component: Notifications
+        path: 'articles/edit/:id',
+        name: 'ArticleEdit',
+        component: ArticleEdit,
+        meta: { requiresAuth: true },
       },
       {
-        path: 'upgrade',
-        name: 'Upgrade to PRO',
-        component: Upgrade
+        path: 'articles/add',
+        name: 'ArticleAdd',
+        component: ArticleAdd,
+        meta: { requiresAuth: true },
+      },
+      {
+        path: 'categories',
+        name: 'CategoryList',
+        component: CategoryList,
+        meta: { requiresAuth: true },
+      },
+      {
+        path: 'categories/edit/:id',
+        name: 'CategoryEdit',
+        component: CategoryEdit,
+        meta: { requiresAuth: true },
+      },
+      {
+        path: 'categories/add',
+        name: 'CategoryAdd',
+        component: CategoryAdd,
+        meta: { requiresAuth: true },
       }
     ]
   },
   { path: '*', component: NotFound }
 ]
-
-/**
- * Asynchronously load view (Webpack Lazy loading compatible)
- * The specified component must be inside the Views folder
- * @param  {string} name  the filename (basename) of the view to load.
-function view(name) {
-   var res= require('../components/Dashboard/Views/' + name + '.vue');
-   return res;
-};**/
 
 export default routes

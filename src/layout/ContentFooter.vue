@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container-fluid">
       <nav>
         <ul class="footer-menu">
@@ -15,7 +15,7 @@
         Designed by <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank">Creative Tim</a>.
       </div>
     </div>
-  </footer>
+  </footer> -->
 </template>
 <script>
   export default {}
